@@ -2,11 +2,23 @@
 layout: base
 ---
 <header class="site-header">
-  <span class="site-header__ham" aria-hidden="true">
+  <button class="site-header__ham" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
     <i></i><i></i><i></i>
-  </span>
+  </button>
   <a href="/" class="site-header__wordmark">TRAVELIER<sup>®</sup></a>
+  <nav id="site-nav" class="site-nav">
+    <a href="/" class="site-nav__link">Catalog</a>
+    <a href="/about/" class="site-nav__link">About</a>
+  </nav>
 </header>
 <main>
   {{ content }}
 </main>
+<footer class="site-footer">
+  <a href="/" class="site-footer__wordmark">TRAVELIER<sup>®</sup></a>
+  <nav class="site-footer__nav" aria-label="Footer navigation">
+    <a href="/about/">About</a>
+  </nav>
+  <span class="site-footer__copy">© 2026 Ignacio Palomo</span>
+</footer>
+<script src="/assets/js/nav.js"></script>
