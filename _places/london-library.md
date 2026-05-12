@@ -16,6 +16,10 @@ license:
   attributionRequired: true
   attributionText: "Recording by quietfield, CC-BY 4.0"
   url: https://creativecommons.org/licenses/by/4.0/
+location:
+  lat: 51.5208
+  lng: -0.1281
+  label: "Bloomsbury, London"
 featured: false
 sortWeight: 930
 tags: [library, indoor, quiet, uk]

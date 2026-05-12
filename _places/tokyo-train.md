@@ -14,6 +14,10 @@ creator:
 license:
   type: CC0
   attributionRequired: false
+location:
+  lat: 35.6896
+  lng: 139.7006
+  label: "Chūō Line, Tokyo"
 featured: false
 sortWeight: 920
 tags: [transit, indoor, urban, japan]

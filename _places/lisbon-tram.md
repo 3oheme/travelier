@@ -14,6 +14,10 @@ creator:
 license:
   type: CC0
   attributionRequired: false
+location:
+  lat: 38.7117
+  lng: -9.1376
+  label: "Alfama, Lisbon"
 featured: false
 sortWeight: 880
 tags: [transit, outdoor, urban, portugal]

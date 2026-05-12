@@ -14,6 +14,10 @@ creator:
 license:
   type: CC0
   attributionRequired: false
+location:
+  lat: -37.8102
+  lng: 144.9667
+  label: "Carlton, Melbourne"
 featured: false
 sortWeight: 860
 tags: [library, indoor, quiet, australia]

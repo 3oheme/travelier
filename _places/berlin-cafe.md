@@ -14,6 +14,10 @@ creator:
 license:
   type: CC0
   attributionRequired: false
+location:
+  lat: 52.4966
+  lng: 13.4185
+  label: "Kreuzberg, Berlin"
 featured: false
 sortWeight: 900
 tags: [café, indoor, urban, germany]

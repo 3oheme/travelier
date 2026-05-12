@@ -15,6 +15,10 @@ license:
   attributionRequired: true
   attributionText: "Recording by koreafield, CC-BY 4.0"
   url: https://creativecommons.org/licenses/by/4.0/
+location:
+  lat: 37.5697
+  lng: 126.9997
+  label: "Gwangjang Market, Seoul"
 featured: false
 sortWeight: 870
 tags: [market, outdoor, urban, korea]

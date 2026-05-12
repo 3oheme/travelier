@@ -15,6 +15,10 @@ license:
   attributionRequired: true
   attributionText: "Recording by rioplatense, CC-BY-SA 4.0"
   url: https://creativecommons.org/licenses/by-sa/4.0/
+location:
+  lat: -34.5880
+  lng: -58.4333
+  label: "Palermo, Buenos Aires"
 featured: false
 sortWeight: 850
 tags: [café, indoor, urban, argentina]

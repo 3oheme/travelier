@@ -47,6 +47,24 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `featured`    | boolean  | `false` | Reserved for v2 paid placement. Stored but ignored by the MVP UI.                            |
 | `sortWeight`  | number   | `0`     | Controls catalog order — higher appears first. In MVP, hand-curated per Place; see "Sort order" above. |
 | `tags`        | string[] | `[]`    | Free-form descriptive tags (e.g. `[café, indoor, urban, japan]`). Not surfaced in MVP UI.    |
+| `location`    | object   | `null`  | Geographic coordinates for the embedded map. See "Location object" below. Omit if unknown.   |
+
+### Location object
+
+Drives the consent-gated Google Maps embed on the detail page. Nothing from Google loads until the user explicitly clicks "Load map".
+
+| Field   | Type   | Required | Description                                                              |
+| ------- | ------ | -------- | ------------------------------------------------------------------------ |
+| `lat`   | number | yes      | Latitude in decimal degrees (e.g. `35.6627`).                            |
+| `lng`   | number | yes      | Longitude in decimal degrees (e.g. `139.6681`).                          |
+| `label` | string | yes      | Short human-readable name shown in the consent placeholder (e.g. `"Shimokitazawa, Tokyo"`). |
+
+```yaml
+location:
+  lat: 35.6627
+  lng: 139.6681
+  label: "Shimokitazawa, Tokyo"
+```
 
 ### Images object
 

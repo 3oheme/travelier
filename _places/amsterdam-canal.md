@@ -15,6 +15,10 @@ license:
   attributionRequired: true
   attributionText: "Recording by dutchwaters, CC-BY 4.0"
   url: https://creativecommons.org/licenses/by/4.0/
+location:
+  lat: 52.3697
+  lng: 4.8850
+  label: "Prinsengracht, Amsterdam"
 featured: false
 sortWeight: 890
 tags: [outdoor, water, urban, netherlands]

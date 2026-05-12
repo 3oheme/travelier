@@ -28,6 +28,24 @@ layout: base
     </div>
   </div>
 
+  {% if page.location %}
+  <div class="place-map">
+    <div class="sec-head">
+      <span class="sec-head__t">Location</span>
+      <div class="sec-head__rule"></div>
+    </div>
+    <div class="map-frame"
+         data-lat="{{ page.location.lat }}"
+         data-lng="{{ page.location.lng }}">
+      <div class="map-consent">
+        <p class="map-consent__place">{{ page.location.label }}</p>
+        <p class="map-consent__note">Clicking loads Google Maps and may set cookies.</p>
+        <button class="btn map-consent__btn" type="button">Load map</button>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
   {% if page.license.attributionRequired %}
   <p class="place-attribution">
     {% if page.license.url %}<a href="{{ page.license.url }}">{{ page.license.attributionText }}</a>{% else %}{{ page.license.attributionText }}{% endif %}

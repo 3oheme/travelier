@@ -16,6 +16,10 @@ license:
   attributionRequired: true
   attributionText: "Recording by fieldrecorder42, CC-BY 4.0"
   url: https://creativecommons.org/licenses/by/4.0/
+location:
+  lat: 35.6627
+  lng: 139.6681
+  label: "Shimokitazawa, Tokyo"
 featured: false
 sortWeight: 950
 tags: [café, indoor, urban, japan]

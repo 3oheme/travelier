@@ -14,6 +14,10 @@ creator:
 license:
   type: CC0
   attributionRequired: false
+location:
+  lat: 48.8737
+  lng: 2.3723
+  label: "Canal Saint-Martin, Paris"
 featured: false
 sortWeight: 940
 tags: [café, indoor, urban, france]
