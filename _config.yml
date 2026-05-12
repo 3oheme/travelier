@@ -1,1 +1,24 @@
-theme: jekyll-theme-cayman
+title: Travelier
+description: Ambient sounds from real-world places to help you focus.
+url: "https://travelier.app"
+baseurl: ""
+
+collections:
+  places:
+    output: true
+    permalink: /places/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: places
+    values:
+      layout: place
+
+exclude:
+  - specs/
+  - scripts/
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md

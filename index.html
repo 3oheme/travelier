@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="catalog">
+  {% assign by_name = site.places | sort: "name" %}
+  {% assign places = by_name | sort: "sortWeight" | reverse %}
+  {% for place in places %}
+  <article class="card">
+    <a href="{{ place.url }}" class="card__link" aria-label="{{ place.name }}">
+      <div class="card__photo">
+        <img
+          src="{{ place.images.thumb }}"
+          alt="{{ place.images.alt }}"
+          width="600"
+          height="450"
+          {% if forloop.index > 6 %}loading="lazy"{% endif %}>
+      </div>
+      <div class="card__bar" aria-hidden="true"></div>
+      <div class="card__caption">
+        <span class="card__name">{{ place.name }}</span>
+        <span class="card__creator">{{ place.creator.name }}</span>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>

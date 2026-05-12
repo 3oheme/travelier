@@ -1,0 +1,43 @@
+---
+layout: base
+---
+<div class="place-hero">
+  <img
+    src="{{ page.images.hero }}"
+    alt="{{ page.images.alt }}"
+    width="1600"
+    height="1200">
+  <a href="/" class="place-back" aria-label="Back to catalog">BACK</a>
+</div>
+
+<main class="place-body">
+  <h1 class="place-name">{{ page.name }}</h1>
+  <p class="place-desc">{{ page.description }}</p>
+
+  <div class="player">
+    <audio id="place-audio" src="{{ page.audio }}" preload="none" loop></audio>
+    <button id="play-btn" class="player-play" aria-label="Play">
+      <span class="player-play__label">PLAY</span>
+      <svg class="player-play__icon" width="16" height="18" viewBox="0 0 16 18" aria-hidden="true" focusable="false">
+        <polygon points="0,0 16,9 0,18" fill="currentColor"/>
+      </svg>
+    </button>
+    <div class="player-volume">
+      <label for="volume-slider" class="player-volume__label">Volume</label>
+      <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+    </div>
+  </div>
+
+  {% if page.license.attributionRequired %}
+  <p class="place-attribution">
+    {% if page.license.url %}<a href="{{ page.license.url }}">{{ page.license.attributionText }}</a>{% else %}{{ page.license.attributionText }}{% endif %}
+  </p>
+  {% endif %}
+
+  <p class="place-creator">
+    Recorded by
+    {% if page.creator.url %}<a href="{{ page.creator.url }}">{{ page.creator.name }}</a>{% else %}{{ page.creator.name }}{% endif %}
+  </p>
+</main>
+
+<script src="/assets/js/player.js"></script>
