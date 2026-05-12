@@ -10,14 +10,11 @@ audio: /assets/places/paris-bistro/track.mp3
 duration: 1800
 creator:
   name: sonosphere
-  url: https://freesound.org/people/sonosphere/
-license:
-  type: CC0
-  attributionRequired: false
 location:
   lat: 48.8737
   lng: 2.3723
   label: "Canal Saint-Martin, Paris"
+source: https://freesound.org/people/sonosphere/
 featured: false
 sortWeight: 940
 tags: [café, indoor, urban, france]

@@ -10,15 +10,11 @@ audio: /assets/places/seoul-market/track.mp3
 duration: 1560
 creator:
   name: koreafield
-license:
-  type: CC-BY
-  attributionRequired: true
-  attributionText: "Recording by koreafield, CC-BY 4.0"
-  url: https://creativecommons.org/licenses/by/4.0/
 location:
   lat: 37.5697
   lng: 126.9997
   label: "Gwangjang Market, Seoul"
+source: https://freesound.org/people/koreafield/
 featured: false
 sortWeight: 870
 tags: [market, outdoor, urban, korea]

@@ -10,15 +10,11 @@ audio: /assets/places/buenos-aires-cafe/track.mp3
 duration: 1740
 creator:
   name: rioplatense
-license:
-  type: CC-BY-SA
-  attributionRequired: true
-  attributionText: "Recording by rioplatense, CC-BY-SA 4.0"
-  url: https://creativecommons.org/licenses/by-sa/4.0/
 location:
   lat: -34.5880
   lng: -58.4333
   label: "Palermo, Buenos Aires"
+source: https://freesound.org/people/rioplatense/
 featured: false
 sortWeight: 850
 tags: [café, indoor, urban, argentina]

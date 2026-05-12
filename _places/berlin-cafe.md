@@ -10,14 +10,11 @@ audio: /assets/places/berlin-cafe/track.mp3
 duration: 1620
 creator:
   name: eurofield
-  url: https://freesound.org/people/eurofield/
-license:
-  type: CC0
-  attributionRequired: false
 location:
   lat: 52.4966
   lng: 13.4185
   label: "Kreuzberg, Berlin"
+source: https://freesound.org/people/eurofield/
 featured: false
 sortWeight: 900
 tags: [café, indoor, urban, germany]

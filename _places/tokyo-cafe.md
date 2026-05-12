@@ -10,16 +10,11 @@ audio: /assets/places/tokyo-cafe/track.mp3
 duration: 1620
 creator:
   name: fieldrecorder42
-  url: https://freesound.org/people/fieldrecorder42/
-license:
-  type: CC-BY
-  attributionRequired: true
-  attributionText: "Recording by fieldrecorder42, CC-BY 4.0"
-  url: https://creativecommons.org/licenses/by/4.0/
 location:
   lat: 35.6627
   lng: 139.6681
   label: "Shimokitazawa, Tokyo"
+source: https://freesound.org/people/fieldrecorder42/
 featured: false
 sortWeight: 950
 tags: [café, indoor, urban, japan]

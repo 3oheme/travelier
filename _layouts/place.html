@@ -46,15 +46,9 @@ layout: base
   </div>
   {% endif %}
 
-  {% if page.license.attributionRequired %}
-  <p class="place-attribution">
-    {% if page.license.url %}<a href="{{ page.license.url }}">{{ page.license.attributionText }}</a>{% else %}{{ page.license.attributionText }}{% endif %}
-  </p>
-  {% endif %}
-
   <p class="place-creator">
     Recorded by
-    {% if page.creator.url %}<a href="{{ page.creator.url }}">{{ page.creator.name }}</a>{% else %}{{ page.creator.name }}{% endif %}
+    {% if page.source %}<a href="{{ page.source }}">{{ page.creator.name }}</a>{% else %}{{ page.creator.name }}{% endif %}
   </p>
 </main>
 

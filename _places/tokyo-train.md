@@ -10,14 +10,11 @@ audio: /assets/places/tokyo-train/track.mp3
 duration: 1440
 creator:
   name: fieldrecorder42
-  url: https://freesound.org/people/fieldrecorder42/
-license:
-  type: CC0
-  attributionRequired: false
 location:
   lat: 35.6896
   lng: 139.7006
   label: "Chūō Line, Tokyo"
+source: https://freesound.org/people/fieldrecorder42/
 featured: false
 sortWeight: 920
 tags: [transit, indoor, urban, japan]

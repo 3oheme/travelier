@@ -10,14 +10,11 @@ audio: /assets/places/melbourne-library/track.mp3
 duration: 2220
 creator:
   name: southernair
-  url: https://freesound.org/people/southernair/
-license:
-  type: CC0
-  attributionRequired: false
 location:
   lat: -37.8102
   lng: 144.9667
   label: "Carlton, Melbourne"
+source: https://freesound.org/people/southernair/
 featured: false
 sortWeight: 860
 tags: [library, indoor, quiet, australia]

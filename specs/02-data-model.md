@@ -38,7 +38,6 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `audio`       | string  | Path to the audio file, e.g. `/assets/places/tokyo-cafe/track.mp3`. MP3, ≤ 22 MB, 96 kbps target.    |
 | `duration`    | number  | Track length in seconds (integer). Used for display and build-time sanity check.                     |
 | `creator`     | object  | See "Creator object" below.                                                                          |
-| `license`     | object  | See "License object" below.                                                                          |
 
 ### Optional fields (with defaults)
 
@@ -47,6 +46,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `featured`    | boolean  | `false` | Reserved for v2 paid placement. Stored but ignored by the MVP UI.                            |
 | `sortWeight`  | number   | `0`     | Controls catalog order — higher appears first. In MVP, hand-curated per Place; see "Sort order" above. |
 | `tags`        | string[] | `[]`    | Free-form descriptive tags (e.g. `[café, indoor, urban, japan]`). Not surfaced in MVP UI.    |
+| `source`      | string   | `null`  | URL of the original recording (Freesound page, SoundCloud track, etc.). Linked from the creator name on the detail page. Omit if not applicable. |
 | `location`    | object   | `null`  | Geographic coordinates for the embedded map. See "Location object" below. Omit if unknown.   |
 
 ### Location object
@@ -76,23 +76,11 @@ location:
 
 ### Creator object
 
-Every Place has a Creator. In MVP this is attribution text + an optional link; in v2 it will expand into a Creator profile page.
-
-| Field  | Type   | Required | Description                                                       |
-| ------ | ------ | -------- | ----------------------------------------------------------------- |
-| `name` | string | yes      | Display name or handle.                                           |
-| `url`  | string | no       | Link to the creator's site or profile (Freesound, SoundCloud, …). |
+| Field  | Type   | Required | Description              |
+| ------ | ------ | -------- | ------------------------ |
+| `name` | string | yes      | Display name or handle.  |
 
 **Do not add `bio`, `avatar`, or `profilePath` in MVP.** Those belong in v2.
-
-### License object
-
-| Field                  | Type    | Required               | Description                                                                                                   |
-| ---------------------- | ------- | ---------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `type`                 | string  | yes                    | One of: `CC0`, `CC-BY`, `CC-BY-SA`, `CC-BY-NC`, `CC-BY-NC-SA`, `public-domain`, `custom`.                     |
-| `attributionRequired`  | boolean | yes                    | `true` for any license that requires credit. Stored explicitly to avoid runtime logic.                        |
-| `attributionText`      | string  | when `attributionRequired: true` | Exact attribution string to display on the detail page.                                              |
-| `url`                  | string  | no                     | Link to the license terms.                                                                                    |
 
 ## Example Place file
 
@@ -111,12 +99,11 @@ audio: /assets/places/tokyo-cafe/track.mp3
 duration: 1620
 creator:
   name: fieldrecorder42
-  url: https://freesound.org/people/fieldrecorder42/
-license:
-  type: CC-BY
-  attributionRequired: true
-  attributionText: "Recording by fieldrecorder42, CC-BY 4.0"
-  url: https://creativecommons.org/licenses/by/4.0/
+source: https://freesound.org/people/fieldrecorder42/sounds/12345/
+location:
+  lat: 35.6627
+  lng: 139.6681
+  label: "Shimokitazawa, Tokyo"
 featured: false
 sortWeight: 950
 tags: [café, indoor, urban, japan]

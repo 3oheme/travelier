@@ -10,14 +10,11 @@ audio: /assets/places/lisbon-tram/track.mp3
 duration: 1320
 creator:
   name: iberiasound
-  url: https://freesound.org/people/iberiasound/
-license:
-  type: CC0
-  attributionRequired: false
 location:
   lat: 38.7117
   lng: -9.1376
   label: "Alfama, Lisbon"
+source: https://freesound.org/people/iberiasound/
 featured: false
 sortWeight: 880
 tags: [transit, outdoor, urban, portugal]
