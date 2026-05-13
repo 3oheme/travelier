@@ -396,13 +396,14 @@ button { cursor: pointer; font: inherit; }
   font-size: 18px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: var(--paper);
-  background: var(--ink);
+  color: var(--ink);
+  background: var(--paper);
   border: var(--rule-4) solid var(--ink);
   padding: 13px 28px 11px;
   line-height: 1;
   min-width: 44px;
   min-height: 44px;
+  cursor: pointer;
   transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
 }
 .player-play::after {
@@ -579,8 +580,6 @@ input[type="range"]:focus-visible {
 /* tag page header */
 .tag-header {
   padding: var(--sp-8) var(--gutter) var(--sp-4);
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 .tag-header__back {
