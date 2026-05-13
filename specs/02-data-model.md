@@ -122,11 +122,14 @@ travelier/
 │   ├── base.html
 │   ├── default.html
 │   ├── page.html
-│   └── place.html
+│   ├── place.html
+│   └── tag.html                  ← tag filtering page (one per unique tag)
 ├── _places/                      ← Jekyll collection: one .md per Place
 │   ├── tokyo-cafe.md
 │   ├── parisian-bistro.md
 │   └── ...
+├── _plugins/
+│   └── tag_generator.rb          ← generates /tags/<tag>/ pages at build time
 ├── assets/
 │   ├── css/
 │   ├── js/
@@ -138,6 +141,9 @@ travelier/
 │       └── ...
 ├── index.html                    ← catalog page
 ├── about.md                      ← about page (uses `page` layout)
+├── contact.md                    ← "Suggest a Place" form (uses `page` layout)
+├── favicon.svg
+├── robots.txt
 ├── CLAUDE.md
 └── specs/
 ```

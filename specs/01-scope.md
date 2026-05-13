@@ -96,6 +96,14 @@ Each track **loops automatically** when it ends. The user does not need to inter
 **And** every interactive element has a tap target of at least 44 × 44 px on phone and tablet
 **And** the hero image on the detail page fills the viewport width elegantly at every breakpoint
 
+### US-10 — Browse by tag
+
+**Given** I am on the catalog page or a Place detail page
+**When** I tap a tag chip
+**Then** I am taken to `/tags/<tag>/` showing only Places with that tag
+**And** the filtered catalog uses the same card grid, sorted by `sortWeight` descending
+**And** the page is generated statically at build time — no JavaScript filtering
+
 ### US-09 — Source credit
 
 **Given** a Place has a `source` URL in its front-matter
@@ -114,12 +122,13 @@ Each track **loops automatically** when it ends. The user does not need to inter
 - **Time-to-interactive on the catalog page:** ≤ 2 seconds on a simulated 4G connection.
 - **Lighthouse mobile profile (catalog page):** Performance ≥ 90, Best Practices ≥ 90, SEO ≥ 90. Accessibility score is explicitly **not gated** in MVP (see Definition of Done).
 - **Semantic HTML and alt text:** mandatory. Not as an a11y deliverable — as basic HTML hygiene and for SEO. Use `<button>`, `<nav>`, `<main>`, `<article>` correctly. Every image has a meaningful `alt`.
+- **SEO:** `<link rel="canonical">`, Open Graph, and Twitter Card meta tags on every page. Place detail pages use the hero image as the OG image. `sitemap.xml` generated at build time by `jekyll-sitemap`. `robots.txt` at root pointing to the sitemap.
 
 ## Definition of Done
 
 The MVP is "done" when all of these are true:
 
-1. All nine user stories above pass their acceptance criteria.
+1. All ten user stories above pass their acceptance criteria.
 2. All launch Places are added to the `_places/` collection with valid hero + thumb + audio assets and a hand-curated `sortWeight` value.
 3. The site is deployed to a public URL on Cloudflare Pages.
 4. Lighthouse mobile scores meet the thresholds in Non-functional requirements (a11y excluded).
