@@ -34,21 +34,5 @@
     });
   }
 
-  // ── map consent-gate ──────────────────────────────────────
-  const mapFrame = document.querySelector('.map-frame');
-  if (mapFrame) {
-    const btn = mapFrame.querySelector('.map-consent__btn');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const lat = mapFrame.dataset.lat;
-        const lng = mapFrame.dataset.lng;
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
-        iframe.title = mapFrame.closest('.place-map').querySelector('.sec-head__t').textContent + ' map';
-        iframe.setAttribute('allowfullscreen', '');
-        mapFrame.innerHTML = '';
-        mapFrame.appendChild(iframe);
-      });
-    }
-  }
+
 }());

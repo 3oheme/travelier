@@ -69,4 +69,4 @@ These directions are why the data model in `specs/02-data-model.md` looks slight
 
 ## Initial catalog
 
-18 audio tracks are sourced and licensed, ready to populate the `_places/` collection. Each will become one Place at launch.
+Places are added incrementally. Each Place is one Markdown file in `_places/` with three media assets (hero, thumb, track). The catalog grows without code changes.

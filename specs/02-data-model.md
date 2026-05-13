@@ -17,7 +17,7 @@ Places render in this order:
 1. `sortWeight` descending (higher values appear first).
 2. Then `name` ascending (alphabetical, locale-aware) as a tie-breaker.
 
-**In MVP the catalog order is hand-curated**, not alphabetical. Each of the 18 launch Places is assigned a unique `sortWeight` value reflecting its desired position. The strongest photographs go first.
+**In MVP the catalog order is hand-curated**, not alphabetical. Each Place is assigned a unique `sortWeight` value reflecting its desired position. The strongest photographs go first.
 
 **Recommended convention:** use sparse values like `1000`, `900`, `800`, … or `180`, `170`, `160`, …, leaving gaps so a new Place can be slotted between two existing ones without renumbering everything.
 
@@ -51,7 +51,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 
 ### Location object
 
-Drives the consent-gated Google Maps embed on the detail page. Nothing from Google loads until the user explicitly clicks "Load map".
+Drives the OpenStreetMap embed on the detail page. The iframe loads on first render — no consent gate needed because OSM sets no tracking cookies.
 
 | Field   | Type   | Required | Description                                                              |
 | ------- | ------ | -------- | ------------------------------------------------------------------------ |
@@ -119,8 +119,9 @@ travelier/
 ├── _config.yml
 ├── _includes/
 ├── _layouts/
+│   ├── base.html
 │   ├── default.html
-│   ├── catalog.html
+│   ├── page.html
 │   └── place.html
 ├── _places/                      ← Jekyll collection: one .md per Place
 │   ├── tokyo-cafe.md
@@ -135,9 +136,8 @@ travelier/
 │       │   ├── thumb.webp
 │       │   └── track.mp3
 │       └── ...
-├── index.html                    ← catalog page (uses `catalog` layout)
-├── scripts/
-│   └── validate-places.js        ← see "Validation" below
+├── index.html                    ← catalog page
+├── about.md                      ← about page (uses `page` layout)
 ├── CLAUDE.md
 └── specs/
 ```
@@ -161,7 +161,7 @@ This makes each `_places/<id>.md` render at `/places/<id>/` and use the `place` 
    - `thumb.webp` (≥ 600 × 450, ≤ 80 KB)
    - `track.mp3` (≤ 24 MB, 96 kbps)
 3. Create `_places/<id>.md` with the YAML front-matter from the example above. The file name must equal `id` + `.md`.
-4. Run the validation script (see below) before committing.
+4. Verify the front-matter manually against the schema above, then commit.
 
 **Claude Code must not modify layouts, the catalog template, or the player to support a new Place.** If adding a Place requires code changes, the schema is wrong and `02-data-model.md` needs revision first.
 
@@ -179,7 +179,6 @@ The schema is currently **unversioned**. If a breaking change is needed post-lau
 
 1. Update this document with the new shape.
 2. Migrate every file in `_places/` in the same commit.
-3. Update `scripts/validate-places.js`.
-4. Tag the commit clearly (e.g. `schema-v2`).
+3. Tag the commit clearly (e.g. `schema-v2`).
 
 If breaking changes become frequent, add a `schemaVersion` field to each Place file and version the validator.

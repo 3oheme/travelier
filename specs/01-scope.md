@@ -17,7 +17,7 @@ Each track **loops automatically** when it ends. The user does not need to inter
 
 ## Catalog sort order
 
-**Hand-curated, not alphabetical.** The 18 launch Places appear in an order chosen by the maintainer to lead with the strongest photographs. Order is controlled per-Place via the `sortWeight` field in the front-matter (higher value = earlier in the catalog). See `02-data-model.md` § "Sort order" for the mechanics.
+**Hand-curated, not alphabetical.** Places appear in an order chosen by the maintainer to lead with the strongest photographs. Order is controlled per-Place via the `sortWeight` field in the front-matter (higher value = earlier in the catalog). See `02-data-model.md` § "Sort order" for the mechanics.
 
 ## Responsive breakpoints
 
@@ -96,12 +96,12 @@ Each track **loops automatically** when it ends. The user does not need to inter
 **And** every interactive element has a tap target of at least 44 × 44 px on phone and tablet
 **And** the hero image on the detail page fills the viewport width elegantly at every breakpoint
 
-### US-09 — Attribution
+### US-09 — Source credit
 
-**Given** a Place's track has a license that requires attribution
+**Given** a Place has a `source` URL in its front-matter
 **When** I view the detail page
-**Then** the attribution text is visible on the page (not hidden behind a menu)
-**And** if the license has a URL, the attribution links to it
+**Then** the creator name is a clickable link to that source URL
+**And** the link opens in a new tab
 
 ## Non-functional requirements
 
@@ -120,9 +120,9 @@ Each track **loops automatically** when it ends. The user does not need to inter
 The MVP is "done" when all of these are true:
 
 1. All nine user stories above pass their acceptance criteria.
-2. All 18 Places are added to the `_places/` collection with valid hero + thumb + audio assets and a hand-curated `sortWeight` value.
+2. All launch Places are added to the `_places/` collection with valid hero + thumb + audio assets and a hand-curated `sortWeight` value.
 3. The site is deployed to a public URL on Cloudflare Pages.
 4. Lighthouse mobile scores meet the thresholds in Non-functional requirements (a11y excluded).
 5. Manual smoke test passes on at least one real iOS device and one real Android device.
 6. `README.md` documents how to add a new Place (steps mirror `specs/02-data-model.md`).
-7. Every Place with a license that requires attribution displays the attribution text on its detail page.
+7. Every Place with a `source` URL has a linked creator credit on its detail page.
