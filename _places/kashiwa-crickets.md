@@ -10,12 +10,12 @@ audio: /assets/places/kashiwa/track.mp3
 duration: 1740
 creator:
   name: rutgermuller
-source: https://creativecommons.org/licenses/by-sa/4.0/
+source: https://freesound.org/people/RutgerMuller/sounds/361987/
 location:
-  lat: -34.5880
-  lng: -58.4333
-  label: "Palermo, Buenos Aires"
+  lat: 35.862192
+  lng: 139.9788471
+  label: "Kashiwa (Chiba) Japan"
 featured: false
-sortWeight: 850
-tags: [café, indoor, urban, argentina]
+sortWeight: 990
+tags: [outdoor, night, urban, japan]
 ---
