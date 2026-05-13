@@ -17,7 +17,7 @@ If you have a real-world recording you'd like to see added to Travelier — or j
 
   <div class="contact-form__field">
     <label for="cf-name">Your name</label>
-    <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Ignacio">
+    <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="John Doe">
   </div>
 
   <div class="contact-form__field">
