@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="tag-header">
+  <a href="/" class="tag-header__back">All places</a>
+  <h1 class="tag-header__title">{{ page.tag }}</h1>
+</div>
+
+{% assign sorted_places = page.tag_places | sort: "sortWeight" | reverse %}
+<div class="catalog">
+  {% for place in sorted_places %}
+  <article class="card">
+    <a href="{{ place.url }}" class="card__link" aria-label="{{ place.name }}">
+      <div class="card__photo">
+        <img
+          src="{{ place.images.thumb }}"
+          alt="{{ place.images.alt }}"
+          width="600"
+          height="450"
+          loading="lazy">
+      </div>
+      <div class="card__bar" aria-hidden="true"></div>
+      <div class="card__caption">
+        <span class="card__name">{{ place.name }}</span>
+        <span class="card__creator">{{ place.creator.name }}</span>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>

@@ -24,3 +24,18 @@ layout: default
   </article>
   {% endfor %}
 </div>
+
+{% assign all_tags = site.places | map: "tags" | flatten | uniq | sort %}
+{% if all_tags.size > 0 %}
+<div class="tag-cloud">
+  <div class="sec-head">
+    <span class="sec-head__t">Browse by tag</span>
+    <div class="sec-head__rule"></div>
+  </div>
+  <div class="tag-cloud__list">
+    {% for tag in all_tags %}
+    <a href="/tags/{{ tag }}/" class="tag-chip">{{ tag }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

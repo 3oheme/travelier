@@ -536,6 +536,74 @@ input[type="range"]:focus-visible {
 }
 .btn:hover { transform: translate(-2px, -2px); }
 
+/* ── tags ────────────────────────────────────────────────── */
+.tag-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--ink);
+  border: var(--rule-2) solid var(--ink);
+  padding: var(--sp-1) var(--sp-3);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+}
+
+.tag-chip:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* tag cloud on catalog page */
+.tag-cloud {
+  padding: var(--sp-12) var(--gutter);
+  border-top: var(--rule-2) solid var(--ink-10);
+}
+
+.tag-cloud__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+/* tags on detail page */
+.place-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+}
+
+/* tag page header */
+.tag-header {
+  padding: var(--sp-8) var(--gutter) var(--sp-4);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tag-header__back {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+  text-decoration: none;
+}
+
+.tag-header__back:hover { color: var(--ink); }
+
+.tag-header__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.1;
+  margin: var(--sp-2) 0 0;
+  text-transform: lowercase;
+}
+
 /* ── map ─────────────────────────────────────────────────── */
 .place-map {
   margin-top: var(--sp-8);
