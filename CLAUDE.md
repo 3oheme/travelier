@@ -24,7 +24,7 @@ A static, photo-driven website that plays ambient sounds from real-world busy pl
 ## Audio constraints (hard)
 
 - Format: MP3, 96 kbps target.
-- Max file size: **22 MB** per track (safety margin under Cloudflare Pages' 25 MB per-file limit).
+- Max file size: **24 MB** per track (safety margin under Cloudflare Pages' 25 MB per-file limit).
 - Tracks loop automatically when they end. **Never** auto-advance to a different Place.
 - `<audio>` elements use `preload="none"`. No audio loads until the user explicitly presses play on the detail page.
 

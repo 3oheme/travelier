@@ -106,7 +106,7 @@ Each track **loops automatically** when it ends. The user does not need to inter
 ## Non-functional requirements
 
 - **Browser support:** current and previous stable versions of Chrome, Firefox, Safari, Edge on desktop; iOS Safari and Chrome on Android.
-- **Audio format:** MP3 at 96 kbps, each file ≤ 22 MB.
+- **Audio format:** MP3 at 96 kbps, each file ≤ 24 MB.
 - **Image format:** WebP for both hero and thumb. Hero ≤ 400 KB, ≥ 1600 × 1200. Thumb ≤ 80 KB, ≥ 600 × 450.
 - **Initial page weight (HTML + CSS + JS, gzipped):** ≤ 100 KB.
 - **Above-the-fold catalog images:** ≤ 600 KB total. Below-the-fold uses `loading="lazy"`.

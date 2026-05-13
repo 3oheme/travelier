@@ -35,7 +35,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `name`        | string  | Display name, 1–60 chars (e.g. `"Tokyo café"`). UTF-8, accented characters allowed.                  |
 | `description` | string  | Atmospheric one- or two-sentence description, 20–200 chars. Plain text.                              |
 | `images`      | object  | Hero and thumb. See "Images object" below.                                                           |
-| `audio`       | string  | Path to the audio file, e.g. `/assets/places/tokyo-cafe/track.mp3`. MP3, ≤ 22 MB, 96 kbps target.    |
+| `audio`       | string  | Path to the audio file, e.g. `/assets/places/tokyo-cafe/track.mp3`. MP3, ≤ 24 MB, 96 kbps target.    |
 | `duration`    | number  | Track length in seconds (integer). Used for display and build-time sanity check.                     |
 | `creator`     | object  | See "Creator object" below.                                                                          |
 
@@ -159,7 +159,7 @@ This makes each `_places/<id>.md` render at `/places/<id>/` and use the `place` 
 2. Create `assets/places/<id>/` and add three files:
    - `hero.webp` (≥ 1600 × 1200, ≤ 400 KB)
    - `thumb.webp` (≥ 600 × 450, ≤ 80 KB)
-   - `track.mp3` (≤ 22 MB, 96 kbps)
+   - `track.mp3` (≤ 24 MB, 96 kbps)
 3. Create `_places/<id>.md` with the YAML front-matter from the example above. The file name must equal `id` + `.md`.
 4. Run the validation script (see below) before committing.
 
