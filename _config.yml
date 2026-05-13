@@ -15,6 +15,9 @@ defaults:
     values:
       layout: place
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - specs/
   - scripts/

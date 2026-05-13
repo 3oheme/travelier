@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.collection == 'places' %}{{ page.name }} — {% elsif page.title and page.title != site.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if page.collection == 'places' %}{{ page.name }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  {% if page.collection == 'places' %}
+  <meta property="og:image" content="{{ site.url }}{{ page.images.hero }}">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="{{ page.images.alt }}">
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="{% if page.collection == 'places' %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{% if page.collection == 'places' %}{{ page.name }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  {% if page.collection == 'places' %}
+  <meta name="twitter:image" content="{{ site.url }}{{ page.images.hero }}">
+  <meta name="twitter:image:alt" content="{{ page.images.alt }}">
+  {% endif %}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
