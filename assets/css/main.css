@@ -627,6 +627,7 @@ input[type="range"]:focus-visible {
   height: 100%;
   border: none;
   filter: grayscale(1) contrast(1.05) brightness(0.97);
+  pointer-events: none;
 }
 
 
