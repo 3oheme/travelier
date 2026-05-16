@@ -26,4 +26,6 @@ That's all this is, really. A small, honest project made by someone who loves wh
 
 Thanks for being here. Now go and find your sound.
 
+![Ignacio Palomo Duarte](/assets/img/ignacio-palomo-duarte.jpg){: .about-photo}
+
 — Ignacio

@@ -677,6 +677,16 @@ input[type="range"]:focus-visible {
   color: var(--ink);
 }
 
+.about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: var(--rule-4) solid var(--ink);
+  margin: var(--sp-8) 0 var(--sp-4);
+  filter: grayscale(1);
+}
+
 .prose p:last-child {
   font-family: var(--font-display);
   font-style: italic;
