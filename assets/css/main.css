@@ -678,13 +678,10 @@ input[type="range"]:focus-visible {
 }
 
 .about-photo {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
+  max-width: 320px;
   border: var(--rule-4) solid var(--ink);
   margin: var(--sp-8) 0 var(--sp-4);
-  filter: grayscale(1);
+  display: block;
 }
 
 .prose p:last-child {
