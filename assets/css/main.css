@@ -678,7 +678,6 @@ input[type="range"]:focus-visible {
 }
 
 .about-photo {
-  max-width: 320px;
   border: var(--rule-4) solid var(--ink);
   margin: var(--sp-8) 0 var(--sp-4);
   display: block;
