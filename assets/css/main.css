@@ -274,6 +274,7 @@ button { cursor: pointer; font: inherit; }
   min-height: 260px;
   overflow: hidden;
   background: var(--ink-20);
+  border-bottom: var(--rule-4) solid var(--ink);
 }
 
 .place-hero img {
