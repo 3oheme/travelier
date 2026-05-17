@@ -18,7 +18,7 @@ defaults:
 plugins:
   - jekyll-sitemap
 
-worker_url: "https://travelier-plays.bohemegm.workers.dev"
+worker_url: "https://travelier.app"
 
 exclude:
   - specs/
