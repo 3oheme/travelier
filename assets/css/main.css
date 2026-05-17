@@ -375,7 +375,6 @@ button { cursor: pointer; font: inherit; }
   line-height: 22px;
   color: var(--ink-90);
   margin: 0 0 var(--sp-6);
-  max-width: 52ch;
   white-space: pre-line;
 }
 
