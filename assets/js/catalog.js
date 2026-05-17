@@ -9,7 +9,7 @@
         var id = card.dataset.id;
         if (counts[id] !== undefined && counts[id] > 0) {
           var el = card.querySelector('.card__plays');
-          if (el) el.textContent = counts[id].toLocaleString() + ' plays';
+          if (el) el.textContent = '▶ ' + counts[id].toLocaleString();
         }
       });
     })

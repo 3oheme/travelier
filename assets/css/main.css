@@ -259,6 +259,13 @@ button { cursor: pointer; font: inherit; }
   line-height: 1.25;
 }
 
+.card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
 .card__creator {
   font-family: var(--font-body);
   font-size: 12px;
@@ -271,6 +278,8 @@ button { cursor: pointer; font: inherit; }
   font-size: 10px;
   letter-spacing: 0.04em;
   color: var(--ink-40);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .place-plays {

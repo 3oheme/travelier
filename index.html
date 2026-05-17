@@ -18,8 +18,10 @@ layout: default
       <div class="card__bar" aria-hidden="true"></div>
       <div class="card__caption">
         <span class="card__name">{{ place.name }}</span>
-        <span class="card__creator">{{ place.creator.name }}</span>
-        <span class="card__plays" aria-hidden="true"></span>
+        <div class="card__meta">
+          <span class="card__creator">{{ place.creator.name }}</span>
+          <span class="card__plays" aria-hidden="true"></span>
+        </div>
       </div>
     </a>
   </article>
