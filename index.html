@@ -5,7 +5,7 @@ layout: default
   {% assign by_name = site.places | sort: "name" %}
   {% assign places = by_name | sort: "sortWeight" | reverse %}
   {% for place in places %}
-  <article class="card" data-id="{{ place.id }}">
+  <article class="card" data-id="{{ place.url | remove: '/places/' | remove: '/' }}">
     <a href="{{ place.url }}" class="card__link" aria-label="{{ place.name }}">
       <div class="card__photo">
         <img
