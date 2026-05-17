@@ -18,9 +18,12 @@ defaults:
 plugins:
   - jekyll-sitemap
 
+worker_url: ""
+
 exclude:
   - specs/
   - scripts/
+  - worker/
   - CLAUDE.md
   - Gemfile
   - Gemfile.lock

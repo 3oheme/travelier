@@ -1,0 +1,8 @@
+name = "travelier-plays"
+main = "src/index.js"
+compatibility_date = "2025-05-01"
+
+[[kv_namespaces]]
+binding = "PLAYS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+preview_id = "REPLACE_WITH_KV_PREVIEW_NAMESPACE_ID"

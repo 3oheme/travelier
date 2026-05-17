@@ -266,6 +266,22 @@ button { cursor: pointer; font: inherit; }
   line-height: 1.4;
 }
 
+.card__plays {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ink-40);
+}
+
+.place-plays {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-60);
+  margin: var(--sp-4) 0 0;
+  min-height: 1em;
+}
+
 /* ── place detail: hero ──────────────────────────────────── */
 .place-hero {
   position: relative;

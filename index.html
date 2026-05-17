@@ -5,7 +5,7 @@ layout: default
   {% assign by_name = site.places | sort: "name" %}
   {% assign places = by_name | sort: "sortWeight" | reverse %}
   {% for place in places %}
-  <article class="card">
+  <article class="card" data-id="{{ place.id }}">
     <a href="{{ place.url }}" class="card__link" aria-label="{{ place.name }}">
       <div class="card__photo">
         <img
@@ -19,6 +19,7 @@ layout: default
       <div class="card__caption">
         <span class="card__name">{{ place.name }}</span>
         <span class="card__creator">{{ place.creator.name }}</span>
+        <span class="card__plays" aria-hidden="true"></span>
       </div>
     </a>
   </article>
@@ -39,3 +40,5 @@ layout: default
   </div>
 </div>
 {% endif %}
+
+<script src="/assets/js/catalog.js"></script>
