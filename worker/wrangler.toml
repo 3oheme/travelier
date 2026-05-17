@@ -4,5 +4,5 @@ compatibility_date = "2025-05-01"
 
 [[kv_namespaces]]
 binding = "PLAYS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
-preview_id = "REPLACE_WITH_KV_PREVIEW_NAMESPACE_ID"
+id = "0a0fcd7cb2bd4ef2adbf12dc3b23ccd5"
+preview_id = "a7af60825a96404c92ee5bda0509c8f2"
