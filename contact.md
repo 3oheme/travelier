@@ -42,3 +42,5 @@ If you have a real-world recording you'd like to see added to Travelier — or j
 
   <button type="submit" class="btn contact-form__submit">Send</button>
 </form>
+
+Prefer email? Reach me directly at [hello@travelier.app](mailto:hello@travelier.app).
