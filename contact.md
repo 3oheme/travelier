@@ -8,7 +8,7 @@ permalink: /contact/
 
 Know a café with the perfect background hum? A library where time slows down? A train platform with a particular kind of quiet?
 
-If you have a real-world recording you'd like to see added to Travelier — or just want to point me toward one — I'd love to hear from you. Fill in the form below and I'll get back to you as soon as I can.
+If you have a real-world recording you'd like to see added to Travelier — or just want to point me toward one — I'd love to hear from you. Fill in the form below, or drop me a line directly at [hello@travelier.app](mailto:hello@travelier.app). I'll get back to you as soon as I can.
 
 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="40330526-a208-4cd5-9950-92839cddc56c">
@@ -42,5 +42,3 @@ If you have a real-world recording you'd like to see added to Travelier — or j
 
   <button type="submit" class="btn contact-form__submit">Send</button>
 </form>
-
-Prefer email? Reach me directly at [hello@travelier.app](mailto:hello@travelier.app).
