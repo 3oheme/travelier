@@ -8,9 +8,11 @@ module Jekyll
       process(@name)
       self.data = {
         'layout'      => 'tag',
-        'title'       => tag,
+        'title'       => "Ambient #{tag} sounds",
+        'description' => "Browse ambient #{tag} recordings on Travelier — real sounds from real places to help you focus.",
         'tag'         => tag,
-        'tag_places'  => places
+        'tag_places'  => places,
+        'sitemap'     => false
       }
     end
   end

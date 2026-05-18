@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.collection == 'places' %}{{ page.name }} — {% elsif page.title and page.title != site.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | truncate: 155 }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <!-- Open Graph -->
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:title" content="{% if page.collection == 'places' %}{{ page.name }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines | truncate: 155 }}">
   {% if page.collection == 'places' %}
   <meta property="og:image" content="{{ site.url }}{{ page.images.hero }}">
   <meta property="og:image:width" content="1600">
@@ -23,10 +23,43 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="{% if page.collection == 'places' %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:title" content="{% if page.collection == 'places' %}{{ page.name }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | strip_newlines | truncate: 155 }}">
   {% if page.collection == 'places' %}
   <meta name="twitter:image" content="{{ site.url }}{{ page.images.hero }}">
   <meta name="twitter:image:alt" content="{{ page.images.alt }}">
+  {% endif %}
+
+  {% if page.collection == 'places' %}
+  {% assign dur_m = page.duration | divided_by: 60 %}
+  {% assign dur_s = page.duration | modulo: 60 %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AudioObject",
+    "name": "{{ page.name }}",
+    "description": "{{ page.description | strip_newlines | strip }}",
+    "contentUrl": "{{ site.url }}{{ page.audio }}",
+    "encodingFormat": "audio/mpeg",
+    "duration": "PT{{ dur_m }}M{{ dur_s }}S",
+    "thumbnailUrl": "{{ site.url }}{{ page.images.thumb }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "creator": {
+      "@type": "Person",
+      "name": "{{ page.creator.name }}"
+    }{% if page.source %},
+    "sameAs": "{{ page.source }}"{% endif %}
+  }
+  </script>
+  {% elsif page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}"
+  }
+  </script>
   {% endif %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
