@@ -36,7 +36,6 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `description` | string  | Atmospheric one- or two-sentence description, 20–200 chars. Plain text.                              |
 | `images`      | object  | Hero and thumb. See "Images object" below.                                                           |
 | `audio`       | string  | Path to the audio file, e.g. `/assets/places/tokyo-cafe/track.mp3`. MP3, ≤ 24 MB, 96 kbps target.    |
-| `duration`    | number  | Track length in seconds (integer). Used for display and build-time sanity check.                     |
 | `creator`     | object  | See "Creator object" below.                                                                          |
 
 ### Optional fields (with defaults)
@@ -96,7 +95,6 @@ images:
   thumb: /assets/places/tokyo-cafe/thumb.webp
   alt: "Wood-clad espresso bar with a barista pouring milk, soft morning light through the window"
 audio: /assets/places/tokyo-cafe/track.mp3
-duration: 1620
 creator:
   name: fieldrecorder42
 source: https://freesound.org/people/fieldrecorder42/sounds/12345/

@@ -30,8 +30,6 @@
   {% endif %}
 
   {% if page.collection == 'places' %}
-  {% assign dur_m = page.duration | divided_by: 60 %}
-  {% assign dur_s = page.duration | modulo: 60 %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,7 +38,6 @@
     "description": "{{ page.description | strip_newlines | strip }}",
     "contentUrl": "{{ site.url }}{{ page.audio }}",
     "encodingFormat": "audio/mpeg",
-    "duration": "PT{{ dur_m }}M{{ dur_s }}S",
     "thumbnailUrl": "{{ site.url }}{{ page.images.thumb }}",
     "url": "{{ site.url }}{{ page.url }}",
     "creator": {

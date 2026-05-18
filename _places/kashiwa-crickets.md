@@ -7,7 +7,6 @@ images:
   thumb: /assets/places/kashiwa/thumb.webp
   alt: "A quiet street in Kashiwa, Japan. A September night in 2016. Crickets fill the dark — several kinds, layered and uneven, some sharp, some soft, a small chorus held together by the warmth still rising from the pavement. Far off, a car passes on a wider road, its hum swelling and thinning into nothing. The crickets return to themselves. A bicycle drifts by, unseen. Somewhere a window is open. The night breathes, and keeps breathing."
 audio: /assets/places/kashiwa/track.mp3
-duration: 1740
 creator:
   name: rutgermuller
 source: https://freesound.org/people/RutgerMuller/sounds/361987/
