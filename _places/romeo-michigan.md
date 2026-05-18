@@ -11,8 +11,8 @@ creator:
   name: Stefanski
 source: https://soundcloud.com/rjsfoundsounds/midnight-trails-with-late-summer-crickets-bats-frogs-field-recorded-sound-map-12
 location:
-  lat: 20.7194024
-  lng: -155.997861
+  lat: 42.8067251
+  lng: -83.02147
   label: "Romeo, Michigan"
 featured: false
 sortWeight: 990

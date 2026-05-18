@@ -17,8 +17,8 @@ source: https://aporee.org/maps/?loc=56495&snd=64621
 location:
   lat: 22.9810608
   lng: 121.0753
-  label: "Donghe Township, Taitung County – Taiwan"
+  label: "Donghe Township, Taitung County in Taiwan"
 featured: false
-sortWeight: 990
+sortWeight: 590
 tags: [outdoor, beach, waves, taitung]
 ---
