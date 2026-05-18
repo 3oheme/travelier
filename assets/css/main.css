@@ -698,6 +698,18 @@ input[type="range"]:focus-visible {
   max-width: 64ch;
 }
 
+.prose a {
+  color: var(--sea);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.12s, text-decoration-color 0.12s;
+}
+
+.prose a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
 .prose strong {
   font-weight: 700;
   color: var(--ink);
