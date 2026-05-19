@@ -43,8 +43,11 @@
   --sp-12: 48px;
   --sp-24: 96px;
 
-  --gutter: 16px;
+  --gutter: 16px; /* overridden at each breakpoint below */
 }
+
+@media (min-width: 601px)  { :root { --gutter: 24px; } }
+@media (min-width: 1025px) { :root { --gutter: 32px; } }
 
 /* ── reset ───────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -190,9 +193,6 @@ button { cursor: pointer; font: inherit; }
 }
 
 @media (min-width: 1025px) {
-  .site-header {
-    padding: var(--sp-6) var(--sp-8);
-  }
   .site-header__wordmark { font-size: 31px; }
 }
 
@@ -214,7 +214,7 @@ button { cursor: pointer; font: inherit; }
   .catalog {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--sp-6);
-    padding: var(--sp-6) var(--sp-8);
+    padding: var(--sp-6) var(--gutter);
   }
 }
 
@@ -350,7 +350,7 @@ button { cursor: pointer; font: inherit; }
 
 @media (min-width: 1025px) {
   .place-body {
-    padding: var(--sp-8) var(--sp-12) var(--sp-24);
+    padding: var(--sp-8) var(--gutter) var(--sp-24);
     max-width: 760px;
   }
 }
@@ -664,7 +664,7 @@ input[type="range"]:focus-visible {
 }
 
 @media (min-width: 1025px) {
-  .prose { padding: var(--sp-12) var(--sp-12) var(--sp-24); }
+  .prose { padding: var(--sp-12) var(--gutter) var(--sp-24); }
 }
 
 .prose h1 {
