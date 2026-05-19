@@ -18,7 +18,7 @@ The user does **not** need to:
 
 ## What the product does
 
-A simple, photo-driven website. The user lands on a catalog of Places — each presented as a beautiful photograph. They tap one, arrive at that Place's detail page, see a large hero image, read a one-sentence description, and press play. The audio loops until they leave the page.
+A simple, photo-driven website. The user lands on a catalog of Places — each presented as a beautiful photograph. They tap one, arrive at that Place's detail page, see a large hero image, read an atmospheric description, and press play. The audio loops until they leave the page.
 
 Travelier is as much a visual product as an audio one. The photo is what makes the user feel they're sitting in that Parisian bistro or that Tokyo café. Without the photo, it's just a sound file.
 
@@ -53,7 +53,9 @@ Explicitly **not** building any of these in v1, no matter how tempting:
 - **Accessibility beyond semantic HTML and alt text** (full keyboard parity and screen-reader work are explicitly deferred — see `01-scope.md`)
 - Creator profile pages (planned for v2 — see below)
 - Featured / starred Places (planned for v2 — see below)
-- Analytics
+- User-level analytics or tracking of any kind
+
+**Note on play counts:** A lightweight aggregate play counter (Cloudflare Worker + KV) is implemented. It records the total number of plays per Place — no user identity, no session tracking, no cookies. This is not analytics; it is a simple engagement signal surfaced to the user ("42 plays").
 
 If any of these come up later, they go in a separate `v2-ideas.md` — not the MVP scope.
 

@@ -33,7 +33,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------- |
 | `id`          | string  | URL-safe slug. Must match `^[a-z0-9-]+$`. Unique across the collection. **Must equal the filename without `.md`.** **Never change after release.** |
 | `name`        | string  | Display name, 1–60 chars (e.g. `"Tokyo café"`). UTF-8, accented characters allowed.                  |
-| `description` | string  | Atmospheric one- or two-sentence description, 20–200 chars. Plain text.                              |
+| `description` | string  | Atmospheric multi-paragraph description of the Place and its sounds. Use YAML block scalar (`description: |`). Plain text, no markdown. No hard length limit — write as much as the Place deserves. |
 | `images`      | object  | Hero and thumb. See "Images object" below.                                                           |
 | `audio`       | string  | Path to the audio file, e.g. `/assets/places/tokyo-cafe/track.mp3`. MP3, ≤ 24 MB, 96 kbps target.    |
 | `creator`     | object  | See "Creator object" below.                                                                          |
@@ -44,7 +44,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | ------------- | -------- | ------- | -------------------------------------------------------------------------------------------- |
 | `featured`    | boolean  | `false` | Reserved for v2 paid placement. Stored but ignored by the MVP UI.                            |
 | `sortWeight`  | number   | `0`     | Controls catalog order — higher appears first. In MVP, hand-curated per Place; see "Sort order" above. |
-| `tags`        | string[] | `[]`    | Free-form descriptive tags (e.g. `[café, indoor, urban, japan]`). Not surfaced in MVP UI.    |
+| `tags`        | string[] | `[]`    | Free-form descriptive tags (e.g. `[cafe, indoor, urban, japan]`). Tag chips shown on the detail page; each tag links to `/tags/<tag>/` — a statically-generated filtered catalog page. |
 | `source`      | string   | `null`  | URL of the original recording (Freesound page, SoundCloud track, etc.). Linked from the creator name on the detail page. Omit if not applicable. |
 | `location`    | object   | `null`  | Geographic coordinates for the embedded map. See "Location object" below. Omit if unknown.   |
 
@@ -139,10 +139,14 @@ travelier/
 │       └── ...
 ├── index.html                    ← catalog page
 ├── about.md                      ← about page (uses `page` layout)
+├── science.md                    ← "The Science" page (uses `page` layout)
 ├── contact.md                    ← "Suggest a Place" form (uses `page` layout)
 ├── favicon.svg
 ├── robots.txt
 ├── CLAUDE.md
+├── worker/                       ← Cloudflare Worker (play counter)
+│   ├── src/index.js              ← Worker handler: GET /plays, GET /plays/:id, POST /plays/:id
+│   └── wrangler.toml             ← KV namespace binding (PLAYS)
 └── specs/
 ```
 
@@ -173,7 +177,7 @@ This makes each `_places/<id>.md` render at `/places/<id>/` and use the `place` 
 
 - **No `slug` separate from `id`.** Same concept; two fields invite drift. The filename is also the same value — three places for one identifier would be three opportunities to drift.
 - **No `category` or `mood`.** Use `tags` — flatter, more flexible, no taxonomy committee needed.
-- **No `popularity` or `playCount`.** Would require analytics, which violates the no-tracking rule.
+- **No `playCount` in the Jekyll schema.** Play counts are stored in Cloudflare KV (keyed by Place `id`) and fetched at runtime by `catalog.js` and `player.js`. They live outside the static data model intentionally — they change constantly and would defeat static generation if stored in front-matter.
 - **No `image` array with multiple sizes per device.** MVP uses exactly two sizes (hero, thumb). If we ever need 3+ responsive variants per Place, the schema gets a properly-structured `srcset` field — but not before.
 - **No `createdAt` / `updatedAt` timestamps.** Git history is the source of truth for that.
 

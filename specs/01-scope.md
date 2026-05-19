@@ -96,6 +96,13 @@ Each track **loops automatically** when it ends. The user does not need to inter
 **And** every interactive element has a tap target of at least 44 × 44 px on phone and tablet
 **And** the hero image on the detail page fills the viewport width elegantly at every breakpoint
 
+### US-09 — Source credit
+
+**Given** a Place has a `source` URL in its front-matter
+**When** I view the detail page
+**Then** the creator name is a clickable link to that source URL
+**And** the link opens in a new tab
+
 ### US-10 — Browse by tag
 
 **Given** I am on the catalog page or a Place detail page
@@ -104,12 +111,15 @@ Each track **loops automatically** when it ends. The user does not need to inter
 **And** the filtered catalog uses the same card grid, sorted by `sortWeight` descending
 **And** the page is generated statically at build time — no JavaScript filtering
 
-### US-09 — Source credit
+### US-11 — Play counter
 
-**Given** a Place has a `source` URL in its front-matter
-**When** I view the detail page
-**Then** the creator name is a clickable link to that source URL
-**And** the link opens in a new tab
+**Given** a Place has been played at least once
+**When** I view the catalog
+**Then** each card shows a play count (e.g. "42 plays") fetched from the Cloudflare Worker
+**When** I view a Place detail page
+**Then** the play count for that Place is shown beneath the player
+**And** pressing play increments the count by one (once per page load)
+**And** counts are stored in Cloudflare KV — no user identity or session is recorded
 
 ## Non-functional requirements
 
@@ -122,7 +132,8 @@ Each track **loops automatically** when it ends. The user does not need to inter
 - **Time-to-interactive on the catalog page:** ≤ 2 seconds on a simulated 4G connection.
 - **Lighthouse mobile profile (catalog page):** Performance ≥ 90, Best Practices ≥ 90, SEO ≥ 90. Accessibility score is explicitly **not gated** in MVP (see Definition of Done).
 - **Semantic HTML and alt text:** mandatory. Not as an a11y deliverable — as basic HTML hygiene and for SEO. Use `<button>`, `<nav>`, `<main>`, `<article>` correctly. Every image has a meaningful `alt`.
-- **SEO:** `<link rel="canonical">`, Open Graph, and Twitter Card meta tags on every page. Place detail pages use the hero image as the OG image. `sitemap.xml` generated at build time by `jekyll-sitemap`. `robots.txt` at root pointing to the sitemap.
+- **SEO:** `<link rel="canonical">`, Open Graph, Twitter Card, and JSON-LD structured data on every page. Place detail pages use the hero image as the OG image and emit `AudioObject` schema. The home page emits `WebSite` schema. `sitemap.xml` generated at build time by `jekyll-sitemap`. `robots.txt` at root pointing to the sitemap.
+- **Static pages:** `/about/`, `/science/` (research behind ambient noise and focus), `/contact/` (place suggestion form via Web3Forms). All use the `page` layout.
 
 ## Definition of Done
 
