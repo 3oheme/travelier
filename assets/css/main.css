@@ -346,6 +346,7 @@ button { cursor: pointer; font: inherit; }
 /* ── place detail: body ──────────────────────────────────── */
 .place-body {
   padding: var(--sp-6) var(--gutter) var(--sp-12);
+  margin-inline: auto;
 }
 
 @media (min-width: 1025px) {
@@ -661,6 +662,7 @@ input[type="range"]:focus-visible {
 .prose {
   padding: var(--sp-8) var(--gutter) var(--sp-12);
   max-width: 68ch;
+  margin-inline: auto;
 }
 
 @media (min-width: 1025px) {
