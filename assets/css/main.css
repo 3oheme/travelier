@@ -149,9 +149,8 @@ button { cursor: pointer; font: inherit; }
   border-top: var(--rule-4) solid var(--ink);
   padding: var(--sp-6) var(--gutter);
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--sp-4);
+  flex-direction: column;
+  gap: var(--sp-6);
 }
 .site-footer__tagline {
   font-family: var(--font-display);
@@ -160,9 +159,12 @@ button { cursor: pointer; font: inherit; }
   font-size: 18px;
   color: var(--ink);
   margin: 0;
-  margin-right: auto;
 }
-.site-footer__nav { display: flex; gap: var(--sp-6); }
+.site-footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
 .site-footer__nav a {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -173,6 +175,20 @@ button { cursor: pointer; font: inherit; }
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--ink-60);
+}
+
+@media (min-width: 601px) {
+  .site-footer {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+  }
+  .site-footer__tagline { margin-right: auto; }
+  .site-footer__nav {
+    flex-direction: row;
+    gap: var(--sp-6);
+  }
 }
 
 .site-header__wordmark {
