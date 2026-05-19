@@ -153,18 +153,18 @@ button { cursor: pointer; font: inherit; }
   flex-wrap: wrap;
   gap: var(--sp-4);
 }
-.site-footer__wordmark {
+.site-footer__tagline {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
   font-size: 18px;
   color: var(--ink);
-  text-decoration: none;
+  margin: 0;
   margin-right: auto;
 }
 .site-footer__nav { display: flex; gap: var(--sp-6); }
 .site-footer__nav a {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 12px;
   color: var(--ink-60);
 }
