@@ -21,6 +21,6 @@ location:
   lng: 3.526399
   label: "Vlissingen, Zeeland – Netherlands"
 featured: false
-sortWeight: 590
+sortWeight: 995
 tags: [outdoor, beach, waves, netherlands]
 ---

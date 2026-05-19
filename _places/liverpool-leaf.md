@@ -15,6 +15,6 @@ location:
   lng: -2.9789667
   label: "Bold street, Liverpool, UK"
 featured: false
-sortWeight: 990
+sortWeight: 998
 tags: [indoor, coffee, cafe, urban, uk]
 ---

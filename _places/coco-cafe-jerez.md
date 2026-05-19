@@ -15,6 +15,6 @@ location:
   lng: -6.135804
   label: "Coco café, Jerez, Spain"
 featured: false
-sortWeight: 990
+sortWeight: 999
 tags: [indoor, coffee, cafe, urban, spain, jerez, andalusia]
 ---

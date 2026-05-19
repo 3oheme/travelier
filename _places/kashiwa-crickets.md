@@ -15,6 +15,6 @@ location:
   lng: 139.9788471
   label: "Kashiwa (Chiba) Japan"
 featured: false
-sortWeight: 990
+sortWeight: 997
 tags: [outdoor, night, urban, japan]
 ---

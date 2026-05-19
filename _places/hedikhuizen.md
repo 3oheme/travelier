@@ -19,6 +19,6 @@ location:
   lng: 5.18463
   label: "Hoge Maasdijk, polder Gelderse Waarden, Hedikhuizen (gem Heusden), Noord-Brabant, Netherlands (Holland)"
 featured: false
-sortWeight: 590
+sortWeight: 994
 tags: [outdoor, countryside, netherlands]
 ---
