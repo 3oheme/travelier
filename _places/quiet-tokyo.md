@@ -1,6 +1,6 @@
 ---
 id: quiet-tokyo
-name: "quiet residential area of Tokyo"
+name: "A quiet residential area of Tokyo"
 description: 
     |
     A narrow side street in Nishi-Asakusa, Tokyo. Mid-morning, the kind of street that runs quietly between the bigger ones — small hotels, an eel restaurant, a pawn shop, a tangle of tall vertical signs in blue and red reaching up toward the wires that stitch the sky together overhead.
