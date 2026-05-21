@@ -613,11 +613,28 @@ input[type="range"]:focus-visible {
 }
 
 /* tags on detail page */
+.place-license {
+  margin-top: var(--sp-8);
+}
+.place-license__body {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-60);
+  margin-top: var(--sp-4);
+}
+.place-license__body p { margin: 0; }
+.place-license__body a {
+  color: var(--sea);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.place-license__body a:hover { color: var(--ink); }
+
 .place-tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
-  margin-top: var(--sp-6);
+  margin-top: var(--sp-8);
 }
 
 /* tag page header */

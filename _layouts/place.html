@@ -45,8 +45,22 @@ layout: base
   </div>
   {% endif %}
 
+  {% if page.license %}
+  <div class="place-license">
+    <div class="sec-head">
+      <span class="sec-head__t">License</span>
+      <div class="sec-head__rule"></div>
+    </div>
+    <div class="place-license__body">{{ page.license | markdownify }}</div>
+  </div>
+  {% endif %}
+
   {% if page.tags and page.tags.size > 0 %}
   <div class="place-tags">
+    <div class="sec-head">
+      <span class="sec-head__t">Tags</span>
+      <div class="sec-head__rule"></div>
+    </div>
     {% for tag in page.tags %}
     <a href="/tags/{{ tag }}/" class="tag-chip">{{ tag }}</a>
     {% endfor %}

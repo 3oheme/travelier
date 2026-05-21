@@ -47,6 +47,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `tags`        | string[] | `[]`    | Free-form descriptive tags (e.g. `[cafe, indoor, urban, japan]`). Tag chips shown on the detail page; each tag links to `/tags/<tag>/` — a statically-generated filtered catalog page. |
 | `source`      | string   | `null`  | URL of the original recording (Freesound page, SoundCloud track, etc.). Linked from the creator name on the detail page. Omit if not applicable. |
 | `location`    | object   | `null`  | Geographic coordinates for the embedded map. See "Location object" below. Omit if unknown.   |
+| `license`     | string   | `null`  | License text for the recording. Supports inline markdown (links, bold). Rendered after the map under a "License" section heading. Example: `"[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"`. Omit if not applicable or if license info is implicit in `source`. |
 
 ### Location object
 
