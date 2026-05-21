@@ -631,12 +631,14 @@ input[type="range"]:focus-visible {
 .place-license__body a:hover { color: var(--ink); }
 
 .place-tags {
+  margin-top: var(--sp-8);
+}
+.place-tags__chips {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
-  margin-top: var(--sp-8);
+  margin-top: var(--sp-4);
 }
-.place-tags .sec-head { width: 100%; align-items: flex-start; margin-bottom: var(--sp-2); }
 
 /* tag page header */
 .tag-header {

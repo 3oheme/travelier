@@ -61,9 +61,11 @@ layout: base
       <span class="sec-head__t">Tags</span>
       <div class="sec-head__rule"></div>
     </div>
-    {% for tag in page.tags %}
-    <a href="/tags/{{ tag }}/" class="tag-chip">{{ tag }}</a>
-    {% endfor %}
+    <div class="place-tags__chips">
+      {% for tag in page.tags %}
+      <a href="/tags/{{ tag }}/" class="tag-chip">{{ tag }}</a>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
 
