@@ -623,12 +623,8 @@ input[type="range"]:focus-visible {
   padding: 0;
 }
 
-.ruled-list__item {
-  border-top: var(--rule-1) solid var(--ink-20);
-}
-
-.ruled-list__item:last-child {
-  border-bottom: var(--rule-1) solid var(--ink-20);
+.ruled-list__item + .ruled-list__item {
+  border-top: var(--rule-1) solid var(--ink-10);
 }
 
 .ruled-list__link {
