@@ -25,4 +25,5 @@ location:
 featured: false
 sortWeight: 991
 tags: [outdoor, residential, tokyo, japan]
+license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by xef6"
 ---

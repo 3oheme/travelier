@@ -21,4 +21,5 @@ location:
 featured: false
 sortWeight: 994
 tags: [outdoor, countryside, netherlands]
+license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld — https://freesound.org/s/467532/"
 ---

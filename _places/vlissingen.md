@@ -23,4 +23,5 @@ location:
 featured: false
 sortWeight: 995
 tags: [outdoor, beach, waves, netherlands]
+license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld — https://freesound.org/s/238785/"
 ---

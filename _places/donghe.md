@@ -21,4 +21,5 @@ location:
 featured: false
 sortWeight: 590
 tags: [outdoor, beach, waves, taitung]
+license: "[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) — recorded by wutsancheng (Wu, Tsan-Cheng)"
 ---

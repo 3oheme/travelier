@@ -23,4 +23,5 @@ location:
 featured: false
 sortWeight: 790
 tags: [outdoor, cafe, coffee, denmark]
+license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by Kyster — https://freesound.org/s/82479/"
 ---

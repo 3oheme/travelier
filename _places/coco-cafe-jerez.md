@@ -17,4 +17,5 @@ location:
 featured: false
 sortWeight: 999
 tags: [indoor, coffee, cafe, urban, spain, jerez, andalusia]
+license: "© palomoduarte — original recording -- License: Creative Commons 0"
 ---

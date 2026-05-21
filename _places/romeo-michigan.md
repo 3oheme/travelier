@@ -17,4 +17,5 @@ location:
 featured: false
 sortWeight: 990
 tags: [outdoor, walk, city, usa]
+license: "Custom permissive (attribution requested) — R.J. Stefanski — https://soundcloud.com/rjsfoundsounds"
 ---

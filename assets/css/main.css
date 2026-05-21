@@ -617,8 +617,8 @@ input[type="range"]:focus-visible {
   margin-top: var(--sp-8);
 }
 .place-license__body {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
   color: var(--ink-60);
   margin-top: var(--sp-4);
 }

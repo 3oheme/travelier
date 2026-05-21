@@ -17,4 +17,5 @@ source: https://archive.org/details/field-recordings/Moonstone_Beach.mp3
 featured: false
 sortWeight: 860
 tags: [beach, outdoor, waves, usa, california]
+license: "No explicit license found — Tom Doerr — https://archive.org/details/field-recordings"
 ---

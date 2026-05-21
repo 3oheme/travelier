@@ -17,4 +17,5 @@ location:
 featured: false
 sortWeight: 997
 tags: [outdoor, night, urban, japan]
+license: "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by RutgerMuller — https://freesound.org/s/361987/"
 ---

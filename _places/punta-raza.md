@@ -21,4 +21,5 @@ source: https://freesound.org/people/felix.blume/sounds/417641/
 featured: false
 sortWeight: 860
 tags: [beach, outdoor, waves, mexico]
+license: "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by felix.blume — https://freesound.org/s/417641/"
 ---

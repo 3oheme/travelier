@@ -20,4 +20,5 @@ location:
 featured: false
 sortWeight: 890
 tags: [outdoor, beach, greece, europe]
+license: "Xerokambos beach 01-Sep-11 60m 24bit.flac by subtyrant -- https://freesound.org/s/132079/ -- License: Creative Commons 0"
 ---
