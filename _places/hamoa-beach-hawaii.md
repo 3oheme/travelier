@@ -18,4 +18,17 @@ featured: false
 sortWeight: 990
 tags: [outdoor, beach, waves, hawaii, usa]
 license: "License unverified — recorded by deepseapro — https://freesound.org/s/376872/"
+playlists:
+  - title: "All the Aloha: Native Hawaii"
+    url: https://open.spotify.com/playlist/37i9dQZF1DWY0N3eAirRjZ
+    source: Spotify
+  - title: "Island Music – Hawaiian & Tropical"
+    url: https://open.spotify.com/playlist/3oNBhelSZ6VWnE7LFDTRQz
+    source: Spotify
+  - title: "Hawaiian Reggae & Island Music Vol. 1"
+    url: https://www.mixcloud.com/DJ_HALOON/hawaiian-island-reggae-mix/
+    source: Mixcloud
+  - title: "Hawaiian Reggae & Island Music Vol. 2"
+    url: "https://www.mixcloud.com/DJ_HALOON/hawaiian-island-reggae-island-style-music-mix-chillin-island-%CA%BBekahi/"
+    source: Mixcloud
 ---

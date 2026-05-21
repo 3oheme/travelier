@@ -22,4 +22,14 @@ featured: false
 sortWeight: 590
 tags: [outdoor, beach, waves, taitung]
 license: "[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) — recorded by wutsancheng (Wu, Tsan-Cheng)"
+playlists:
+  - title: "The Sound of Taiwanese Indie"
+    url: https://open.spotify.com/playlist/1VeXCbhw7LZfOlrwzCc3O9
+    source: Spotify
+  - title: "Taiwan Chill Indie R&B"
+    url: https://open.spotify.com/playlist/5f141GlAEqee0tKkpIp8dn
+    source: Spotify
+  - title: "Chill Asian Vibes"
+    url: https://open.spotify.com/playlist/5cFH3KJOd7HTkpEHrbIkjJ
+    source: Spotify
 ---

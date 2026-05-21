@@ -26,4 +26,17 @@ featured: false
 sortWeight: 991
 tags: [outdoor, residential, tokyo, japan]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by xef6"
+playlists:
+  - title: "Japanese City Pop Mix"
+    url: https://open.spotify.com/playlist/37i9dQZF1EIdFauPJfjLxp
+    source: Spotify
+  - title: "Tokyo By Night"
+    url: https://open.spotify.com/playlist/5erXqft9mBmGdV5zS0O5c2
+    source: Spotify
+  - title: "Tokyo Café Jazzhop"
+    url: https://open.spotify.com/playlist/1t6QcJlHYnjnHgSJvPER8y
+    source: Spotify
+  - title: "Tokyo Tangents – Japanese Ambient"
+    url: https://www.mixcloud.com/redbullradio/tokyo-tangents-with-masaaki-hara-japanese-ambient/
+    source: Mixcloud
 ---

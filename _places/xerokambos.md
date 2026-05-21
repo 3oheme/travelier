@@ -21,4 +21,17 @@ featured: false
 sortWeight: 890
 tags: [outdoor, beach, greece, europe]
 license: "Xerokambos beach 01-Sep-11 60m 24bit.flac by subtyrant -- https://freesound.org/s/132079/ -- License: Creative Commons 0"
+playlists:
+  - title: "The Sound of Rebetiko"
+    url: https://open.spotify.com/playlist/32IC3D0niv0cIISHsGtehW
+    source: Spotify
+  - title: "Cretan Music"
+    url: https://open.spotify.com/playlist/6Fxyk9dHbT5lapXcw6xBAK
+    source: Spotify
+  - title: "The Sound of Greek Indie"
+    url: https://open.spotify.com/playlist/5UMnYHbk0p2Ng3lCiVosMZ
+    source: Spotify
+  - title: "Rebetiko Mix"
+    url: https://www.mixcloud.com/NickGeko/rebetiko-mix/
+    source: Mixcloud
 ---

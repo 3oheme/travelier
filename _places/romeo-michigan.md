@@ -18,4 +18,17 @@ featured: false
 sortWeight: 990
 tags: [outdoor, walk, city, usa]
 license: "Custom permissive (attribution requested) — R.J. Stefanski — https://soundcloud.com/rjsfoundsounds"
+playlists:
+  - title: "Heartland Country"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX5iKSDtVcf7Q
+    source: Spotify
+  - title: "The Sound of Midwest Americana"
+    url: https://open.spotify.com/playlist/35vbrIRrC2Yt071E4HL8Y4
+    source: Spotify
+  - title: "Americana Country Folk"
+    url: https://open.spotify.com/playlist/2qWbq50EQ2RrfTO0bVhxVs
+    source: Spotify
+  - title: "Americana / Alt-Country / Folk"
+    url: https://open.spotify.com/playlist/1IgLuHx0TXmzrWmqgw53Zb
+    source: Spotify
 ---

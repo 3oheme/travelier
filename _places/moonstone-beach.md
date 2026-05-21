@@ -18,4 +18,17 @@ featured: false
 sortWeight: 860
 tags: [beach, outdoor, waves, usa, california]
 license: "No explicit license found — Tom Doerr — https://archive.org/details/field-recordings"
+playlists:
+  - title: "The Sound of Indie Surf"
+    url: https://open.spotify.com/playlist/6nLRnyAmEOi7OeEddElTgo
+    source: Spotify
+  - title: "California Surf Music"
+    url: https://open.spotify.com/playlist/02dbTd7mXjSUBjyjHPfjvM
+    source: Spotify
+  - title: "Beach Days – Indie / Folk / Pop"
+    url: https://open.spotify.com/playlist/7aM61ztASk7BXXi6gxfxOR
+    source: Spotify
+  - title: "Ambient Folk & Cosmic Roots"
+    url: https://www.mixcloud.com/lowlight/ambient-folk-cosmic-roots/
+    source: Mixcloud
 ---

@@ -19,13 +19,16 @@ sortWeight: 999
 tags: [indoor, coffee, cafe, urban, spain, jerez, andalusia]
 license: "© palomoduarte — original recording -- License: Creative Commons 0"
 playlists:
-  - title: "Flamenco para trabajar"
-    url: https://open.spotify.com/playlist/37i9dQZF1DX7F6T2n2fegs
+  - title: "Flamenco 100%"
+    url: https://open.spotify.com/playlist/37i9dQZF1DWTfrrcwZAlVH
     source: Spotify
-  - title: "Café del Mar Chillout"
-    url: https://soundcloud.com/cafedelmar/sets/chillout-classics
-    source: SoundCloud
-  - title: "Andalusian Guitar Sessions"
-    url: https://open.spotify.com/playlist/37i9dQZF1DXd9nR9jEsaFr
+  - title: "Spanish Coffeehouse"
+    url: https://open.spotify.com/playlist/1A5CLs326Bp7OLgmTNgoo0
     source: Spotify
+  - title: "Jazz con Sabor Flamenco"
+    url: https://www.mixcloud.com/marianoballesteros1/jazz-en-la-nube-07-con-sabor-flamenco/
+    source: Mixcloud
+  - title: "Spanish Flamenco Guitar Mix"
+    url: https://www.mixcloud.com/Juliangay/gypsy-flamenco-the-spanish-guitar/
+    source: Mixcloud
 ---

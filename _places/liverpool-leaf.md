@@ -18,4 +18,17 @@ featured: false
 sortWeight: 998
 tags: [indoor, coffee, cafe, urban, uk]
 license: "Leaf on Bold Street Coffee Liverpool by radames -- https://freesound.org/s/341540/ -- License: Attribution NonCommercial 3.0"
+playlists:
+  - title: "Jazz UK"
+    url: https://open.spotify.com/playlist/37i9dQZF1DXbHcQpOiXk1D
+    source: Spotify
+  - title: "The Sound of UK Contemporary Jazz"
+    url: https://open.spotify.com/playlist/5PbFpGjcgYEyyJvl6Z2wt4
+    source: Spotify
+  - title: "The Sound of Liverpool Indie"
+    url: https://open.spotify.com/playlist/6Lme4XrGrtLxfFdMTXZtsv
+    source: Spotify
+  - title: "Best British Indie – 80s 90s 00s"
+    url: https://open.spotify.com/playlist/26SYBVHoIm9fXp5gZNEsGb
+    source: Spotify
 ---

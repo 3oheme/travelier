@@ -22,4 +22,17 @@ featured: false
 sortWeight: 994
 tags: [outdoor, countryside, netherlands]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld — https://freesound.org/s/467532/"
+playlists:
+  - title: "The Sound of Dutch Folk"
+    url: https://open.spotify.com/playlist/06dBdsfZUXHNheFpuDrA24
+    source: Spotify
+  - title: "Easy Sunday – NL Indie Folk"
+    url: https://open.spotify.com/playlist/6iYlLf2xbS8zPbmFhhUxZA
+    source: Spotify
+  - title: "The Sound of Ambient Folk"
+    url: https://open.spotify.com/playlist/7eKmP82luDpQR2hymWE1iJ
+    source: Spotify
+  - title: "Nordic & European Folk / Ambient"
+    url: https://open.spotify.com/playlist/0U8BECAreuz5GLUPU8yGl0
+    source: Spotify
 ---

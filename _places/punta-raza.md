@@ -22,4 +22,14 @@ featured: false
 sortWeight: 860
 tags: [beach, outdoor, waves, mexico]
 license: "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by felix.blume — https://freesound.org/s/417641/"
+playlists:
+  - title: "Música Mexicana Rising"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX10A9MXc7csF
+    source: Spotify
+  - title: "Mexico Beach Vacation"
+    url: https://open.spotify.com/playlist/1lFIoVV8qGyctNfO0usEZe
+    source: Spotify
+  - title: "Mexican Folk Music"
+    url: https://open.spotify.com/playlist/4PwYGTUcBmb17zKwuEJ0iY
+    source: Spotify
 ---

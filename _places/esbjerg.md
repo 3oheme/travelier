@@ -24,4 +24,14 @@ featured: false
 sortWeight: 790
 tags: [outdoor, cafe, coffee, denmark]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by Kyster — https://freesound.org/s/82479/"
+playlists:
+  - title: "Nordic Jazz"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX3joPD88EypN
+    source: Spotify
+  - title: "Hygge – Cosy & Relaxed"
+    url: https://open.spotify.com/playlist/74f37LpKiuCy3K6mksEMQF
+    source: Spotify
+  - title: "Scandinavian Jazz"
+    url: https://open.spotify.com/playlist/1ChjgrC2JNFGEqHyw3sZVL
+    source: Spotify
 ---

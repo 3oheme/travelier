@@ -24,4 +24,14 @@ featured: false
 sortWeight: 995
 tags: [outdoor, beach, waves, netherlands]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld — https://freesound.org/s/238785/"
+playlists:
+  - title: "The Sound of Atmospheric Post-Rock"
+    url: https://open.spotify.com/playlist/2sTxdHJ1Nf5vve4zmir510
+    source: Spotify
+  - title: "Ambient Post-Rock"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX9uKvEw7Rwtq
+    source: Spotify
+  - title: "Nordic & European Folk / Ambient"
+    url: https://open.spotify.com/playlist/0U8BECAreuz5GLUPU8yGl0
+    source: Spotify
 ---

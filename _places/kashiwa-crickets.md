@@ -18,4 +18,17 @@ featured: false
 sortWeight: 997
 tags: [outdoor, night, urban, japan]
 license: "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by RutgerMuller — https://freesound.org/s/361987/"
+playlists:
+  - title: "Lofi Japan – Japanese Beats"
+    url: https://open.spotify.com/playlist/5YKm5Zt0AUdKrlrvWzUV6l
+    source: Spotify
+  - title: "LoFi Japanese Jazz"
+    url: https://open.spotify.com/playlist/3tDtSPraV9Tws4QJ3HKQ8G
+    source: Spotify
+  - title: "Tokyo Nights – LoFi Hip Hop Mix"
+    url: https://www.mixcloud.com/Bamf/tokyo-nights-lofi-hip-hop-mix/
+    source: Mixcloud
+  - title: "Japanese Ambient Journey – Tokyo"
+    url: https://www.mixcloud.com/dublabjp/japanese-ambient-journey-vol11-tokyo/
+    source: Mixcloud
 ---
