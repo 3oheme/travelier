@@ -619,7 +619,7 @@ input[type="range"]:focus-visible {
 
 .ruled-list {
   list-style: none;
-  margin: var(--sp-4) 0 0;
+  margin: var(--sp-2) 0 0;
   padding: 0;
 }
 
