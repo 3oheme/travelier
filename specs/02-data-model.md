@@ -48,6 +48,7 @@ Every file in `_places/` has YAML front-matter with the following fields.
 | `source`      | string   | `null`  | URL of the original recording (Freesound page, SoundCloud track, etc.). Linked from the creator name on the detail page. Omit if not applicable. |
 | `location`    | object   | `null`  | Geographic coordinates for the embedded map. See "Location object" below. Omit if unknown.   |
 | `license`     | string   | `null`  | License text for the recording. Supports inline markdown (links, bold). Rendered after the map under a "License" section heading. Example: `"[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"`. Omit if not applicable or if license info is implicit in `source`. |
+| `playlists`   | object[] | `[]`    | Music playlists to pair with the ambient sound. Rendered after License under a "Pair with" section as a ruled list. Each item opens in a new tab. See "Playlist object" below. |
 
 ### Location object
 
@@ -64,6 +65,26 @@ location:
   lat: 35.6627
   lng: 139.6681
   label: "Shimokitazawa, Tokyo"
+```
+
+### Playlist object
+
+Each item in the `playlists` array has three required fields.
+
+| Field    | Type   | Required | Description                                                                     |
+| -------- | ------ | -------- | ------------------------------------------------------------------------------- |
+| `title`  | string | yes      | Display name of the playlist (e.g. `"Flamenco para trabajar"`).                 |
+| `url`    | string | yes      | Full URL to the playlist. Opens in a new tab. Any platform is valid.            |
+| `source` | string | yes      | Platform name shown on the right of the row (e.g. `"Spotify"`, `"SoundCloud"`). |
+
+```yaml
+playlists:
+  - title: "Flamenco para trabajar"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX7F6T2n2fegs
+    source: Spotify
+  - title: "Café del Mar Chillout"
+    url: https://soundcloud.com/cafedelmar/sets/chillout-classics
+    source: SoundCloud
 ```
 
 ### Images object

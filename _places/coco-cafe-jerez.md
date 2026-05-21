@@ -18,4 +18,14 @@ featured: false
 sortWeight: 999
 tags: [indoor, coffee, cafe, urban, spain, jerez, andalusia]
 license: "© palomoduarte — original recording -- License: Creative Commons 0"
+playlists:
+  - title: "Flamenco para trabajar"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX7F6T2n2fegs
+    source: Spotify
+  - title: "Café del Mar Chillout"
+    url: https://soundcloud.com/cafedelmar/sets/chillout-classics
+    source: SoundCloud
+  - title: "Andalusian Guitar Sessions"
+    url: https://open.spotify.com/playlist/37i9dQZF1DXd9nR9jEsaFr
+    source: Spotify
 ---

@@ -55,6 +55,25 @@ layout: base
   </div>
   {% endif %}
 
+  {% if page.playlists and page.playlists.size > 0 %}
+  <div class="place-playlists">
+    <div class="sec-head">
+      <span class="sec-head__t">Pair with</span>
+      <div class="sec-head__rule"></div>
+    </div>
+    <ul class="ruled-list">
+      {% for playlist in page.playlists %}
+      <li class="ruled-list__item">
+        <a href="{{ playlist.url }}" target="_blank" rel="noopener noreferrer" class="ruled-list__link">
+          <span class="ruled-list__title">{{ playlist.title }}</span>
+          <span class="ruled-list__source">{{ playlist.source }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   {% if page.tags and page.tags.size > 0 %}
   <div class="place-tags">
     <div class="sec-head">

@@ -612,6 +612,55 @@ input[type="range"]:focus-visible {
   margin-top: var(--sp-4);
 }
 
+/* ── ruled list (playlists) ──────────────────────────────── */
+.place-playlists {
+  margin-top: var(--sp-8);
+}
+
+.ruled-list {
+  list-style: none;
+  margin: var(--sp-4) 0 0;
+  padding: 0;
+}
+
+.ruled-list__item {
+  border-top: var(--rule-1) solid var(--ink-20);
+}
+
+.ruled-list__item:last-child {
+  border-bottom: var(--rule-1) solid var(--ink-20);
+}
+
+.ruled-list__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.ruled-list__link:hover .ruled-list__title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ruled-list__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ruled-list__source {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-40);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
 /* tags on detail page */
 .place-license {
   margin-top: var(--sp-8);
