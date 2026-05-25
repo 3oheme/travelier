@@ -53,9 +53,11 @@ Explicitly **not** building any of these in v1, no matter how tempting:
 - **Accessibility beyond semantic HTML and alt text** (full keyboard parity and screen-reader work are explicitly deferred — see `01-scope.md`)
 - Creator profile pages (planned for v2 — see below)
 - Featured / starred Places (planned for v2 — see below)
-- User-level analytics or tracking of any kind
+- User-level analytics, session tracking, or behavioral profiling of any kind
 
-**Note on play counts:** A lightweight aggregate play counter (Cloudflare Worker + KV) is implemented. It records the total number of plays per Place — no user identity, no session tracking, no cookies. This is not analytics; it is a simple engagement signal surfaced to the user ("42 plays").
+**Aggregate signals in use (not user-tracking):**
+- **Simple Analytics** — privacy-first page-view counter loaded `async` in the base layout. No cookies, no fingerprinting, no personal data. Records aggregate page views only.
+- **Play counter** — a lightweight Cloudflare Worker + KV counter records the total number of plays per Place. No user identity, no session tracking, no cookies. Surfaced to the user as "42 plays".
 
 If any of these come up later, they go in a separate `v2-ideas.md` — not the MVP scope.
 

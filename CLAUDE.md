@@ -61,7 +61,10 @@ Do not use *scene*, *soundscape*, *ambience*, *room*, *location*, or *spot* inte
 
 1. **Mobile-first.** Build and test at narrow viewport before desktop.
 2. **No accounts, ever.** If a feature seems to need login, the feature is wrong for this product.
-3. **No runtime third-party dependencies**, with one explicit exception: **Google Fonts CDN** is used for the typefaces defined in the design system (Zilla Slab, Merriweather, Playfair Display SC). These are loaded with `font-display=swap` so they do not block rendering and the site degrades gracefully to system serif fallbacks. No other external APIs, analytics scripts, or CDNs are permitted.
+3. **No runtime third-party dependencies**, with two explicit exceptions:
+   - **Google Fonts CDN** is used for the typefaces defined in the design system (Zilla Slab, Merriweather, Playfair Display SC). These are loaded with `font-display=swap` so they do not block rendering and the site degrades gracefully to system serif fallbacks.
+   - **Simple Analytics** (`scripts.simpleanalyticscdn.com/latest.js`) is loaded `async` just before `</body>` in `_layouts/base.html`. It records aggregate page-view counts — no cookies, no fingerprinting, no personal data, GDPR-compliant.
+   No other external APIs, tracking scripts, or CDNs are permitted.
 4. **No JS framework.** Plain JavaScript only. Used only for the audio player. If a feature seems to need React/Vue/Alpine, the feature is wrong.
 5. **Performance budget:**
    - HTML + CSS + JS gzipped: ≤ 100 KB.
@@ -89,6 +92,6 @@ Do not use *scene*, *soundscape*, *ambience*, *room*, *location*, or *spot* inte
 - Creator profile pages
 - Featured / starred Places (paid placement)
 - PWA / offline install
-- Analytics of any kind
+- User-level analytics or behavioral tracking (Simple Analytics aggregate page views are in use; user-identifying or session-level tracking is not)
 
 These belong in v2 or never. See `00-vision.md` § "Out of scope" for the full list.
