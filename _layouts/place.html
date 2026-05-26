@@ -22,12 +22,14 @@ layout: base
         <polygon points="0,0 16,9 0,18" fill="currentColor"/>
       </svg>
     </button>
-    <div class="player-volume">
-      <label for="volume-slider" class="player-volume__label">Volume</label>
-      <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+    <div class="player-right">
+      <div class="player-volume">
+        <label for="volume-slider" class="player-volume__label">Vol</label>
+        <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+      </div>
+      <p class="place-plays" id="place-plays" aria-live="polite"></p>
     </div>
   </div>
-  <p class="place-plays" id="place-plays" aria-live="polite"></p>
 
   {% if page.location %}
   <div class="place-map">

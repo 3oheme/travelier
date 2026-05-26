@@ -298,15 +298,6 @@ button { cursor: pointer; font: inherit; }
   flex-shrink: 0;
 }
 
-.place-plays {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--ink-60);
-  margin: var(--sp-4) 0 0;
-  min-height: 1em;
-}
-
 /* ── place detail: hero ──────────────────────────────────── */
 .place-hero {
   position: relative;
@@ -418,18 +409,37 @@ button { cursor: pointer; font: inherit; }
   text-decoration: underline;
 }
 
-/* ── audio player ────────────────────────────────────────── */
+/* ── audio player ─────────────────────────────────────────── */
+
+/* Mobile-first: fixed bar pinned to bottom of viewport */
 .player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
-  gap: var(--sp-6);
-  flex-wrap: wrap;
-  margin-top: var(--sp-2);
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--gutter);
+  padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom, 0px));
+  background: var(--paper);
+  border-top: var(--rule-1) solid var(--ink-10);
 }
 
-/* play / pause button — raised slab treatment */
+/* right column: volume slider + play count */
+.player-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  min-width: 0;
+}
+
+/* play / pause button */
 .player-play {
   position: relative;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
@@ -449,6 +459,7 @@ button { cursor: pointer; font: inherit; }
   cursor: pointer;
   transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
 }
+/* drop-shadow: hidden in mobile fixed bar, restored on desktop */
 .player-play::after {
   content: "";
   position: absolute;
@@ -457,34 +468,25 @@ button { cursor: pointer; font: inherit; }
   bottom: -12px;
   height: var(--rule-4);
   background: var(--ink-60);
+  display: none;
 }
-.player-play:hover {
-  transform: translate(-2px, -2px);
-}
-.player-play:hover::after {
-  left: 28px;
-  right: 20px;
-  bottom: -14px;
-}
-
+.player-play:hover { transform: translate(-2px, -2px); }
+.player-play:hover::after { left: 28px; right: 20px; bottom: -14px; }
 .player-play.is-playing {
   background: var(--paper-cool);
   color: var(--ink);
   border-color: var(--ink-60);
 }
-
 .player-play__icon { display: block; }
 
-/* volume control */
+/* volume */
 .player-volume {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
-  flex: 1;
-  min-width: 120px;
-  max-width: 200px;
+  gap: var(--sp-2);
+  min-width: 0;
 }
-
 .player-volume__label {
   font-family: var(--font-label);
   font-size: 10px;
@@ -492,8 +494,22 @@ button { cursor: pointer; font: inherit; }
   text-transform: uppercase;
   color: var(--ink-60);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
+/* play count — inline in player */
+.place-plays {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-60);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+  min-height: 1em;
+}
+
+/* range input */
 input[type="range"] {
   flex: 1;
   -webkit-appearance: none;
@@ -525,6 +541,29 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
+}
+
+/* Desktop: in-flow block framed by ink-10 rules; drop-shadow restored */
+@media (min-width: 601px) {
+  .player {
+    position: static;
+    padding: var(--sp-4) 0 var(--sp-6);
+    background: transparent;
+    border-top: var(--rule-1) solid var(--ink-10);
+    border-bottom: var(--rule-1) solid var(--ink-10);
+    margin-top: var(--sp-4);
+    gap: var(--sp-6);
+  }
+  .player-play::after { display: block; }
+  .player-volume { max-width: 200px; }
+  .place-plays { margin-left: auto; }
+}
+
+/* Place pages: prevent footer from hiding behind the fixed bar on mobile */
+@media (max-width: 600px) {
+  .place-body ~ .site-footer {
+    padding-bottom: calc(var(--sp-6) + 64px + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* ── section header ─────────────────────────────────────── */
