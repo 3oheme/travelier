@@ -441,7 +441,7 @@ button { cursor: pointer; font: inherit; }
   text-transform: uppercase;
   color: var(--ink);
   background: var(--paper);
-  border: var(--rule-4) solid var(--ink);
+  border: var(--rule-4) solid var(--ink-60);
   padding: 13px 28px 11px;
   line-height: 1;
   min-width: 44px;
@@ -456,7 +456,7 @@ button { cursor: pointer; font: inherit; }
   right: 24px;
   bottom: -12px;
   height: var(--rule-4);
-  background: var(--ink);
+  background: var(--ink-60);
 }
 .player-play:hover {
   transform: translate(-2px, -2px);
@@ -468,9 +468,9 @@ button { cursor: pointer; font: inherit; }
 }
 
 .player-play.is-playing {
-  background: var(--mint);
+  background: var(--paper-cool);
   color: var(--ink);
-  border-color: var(--ink);
+  border-color: var(--ink-60);
 }
 
 .player-play__icon { display: block; }
@@ -510,14 +510,14 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 16px;
   height: 16px;
-  background: var(--ink);
+  background: var(--ink-60);
   border-radius: 0;
   cursor: pointer;
 }
 input[type="range"]::-moz-range-thumb {
   width: 16px;
   height: 16px;
-  background: var(--ink);
+  background: var(--ink-60);
   border: none;
   border-radius: 0;
   cursor: pointer;
