@@ -421,18 +421,20 @@ button { cursor: pointer; font: inherit; }
   display: flex;
   align-items: center;
   gap: var(--sp-4);
-  padding: var(--sp-3) var(--gutter);
-  padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom, 0px));
+  /* bottom padding = home-indicator inset only (viewport-fit:cover extends
+     viewport to screen edge; env() covers the gesture area exactly) */
+  padding: var(--sp-3) var(--gutter) env(safe-area-inset-bottom, var(--sp-3));
   background: var(--paper);
   border-top: var(--rule-1) solid var(--ink-10);
 }
 
-/* right column: volume slider + play count */
+/* right column: volume on top, play count below — avoids overlap on narrow screens */
 .player-right {
   flex: 1;
   display: flex;
-  align-items: center;
-  gap: var(--sp-4);
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
   min-width: 0;
 }
 
@@ -555,14 +557,20 @@ input[type="range"]:focus-visible {
     gap: var(--sp-6);
   }
   .player-play::after { display: block; }
+  .player-right {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--sp-6);
+  }
   .player-volume { max-width: 200px; }
   .place-plays { margin-left: auto; }
 }
 
-/* Place pages: prevent footer from hiding behind the fixed bar on mobile */
+/* Place pages: prevent footer from hiding behind the fixed bar on mobile.
+   68px ≈ player bar content height; env() adds the home-indicator inset. */
 @media (max-width: 600px) {
   .place-body ~ .site-footer {
-    padding-bottom: calc(var(--sp-6) + 64px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
   }
 }
 
