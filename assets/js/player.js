@@ -42,13 +42,20 @@
         if (label) label.textContent = 'PAUSE';
         if (icon) icon.innerHTML = PAUSE_ICON;
 
-        // increment once per page load
-        if (!counted && placeId && workerUrl) {
+        // fire once per page load
+        if (!counted && placeId) {
           counted = true;
-          fetch(workerUrl + '/plays/' + placeId, { method: 'POST' })
-            .then(function (r) { return r.json(); })
-            .then(function (d) { showCount(d.plays); })
-            .catch(function () {});
+          // Simple Analytics event — grouped by place, e.g. "play_paris-bistro"
+          if (typeof window.sa_event === 'function') {
+            window.sa_event('play_' + placeId);
+          }
+          // increment play counter
+          if (workerUrl) {
+            fetch(workerUrl + '/plays/' + placeId, { method: 'POST' })
+              .then(function (r) { return r.json(); })
+              .then(function (d) { showCount(d.plays); })
+              .catch(function () {});
+          }
         }
       } else {
         audio.pause();
