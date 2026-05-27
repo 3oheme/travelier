@@ -425,7 +425,7 @@ button { cursor: pointer; font: inherit; }
      browser chrome — no safe-area inset required */
   padding: var(--sp-3) var(--gutter);
   background: var(--paper);
-  border-top: var(--rule-1) solid var(--ink-10);
+  border-top: var(--rule-4) solid var(--ink);
 }
 
 /* right column: volume on top, play count below — avoids overlap on narrow screens */
@@ -442,9 +442,11 @@ button { cursor: pointer; font: inherit; }
 .player-play {
   position: relative;
   flex-shrink: 0;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--sp-2);
+  width: 150px;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
@@ -454,9 +456,8 @@ button { cursor: pointer; font: inherit; }
   color: var(--ink);
   background: var(--paper);
   border: var(--rule-4) solid var(--ink-60);
-  padding: 13px 28px 11px;
+  padding: 13px 0 11px;
   line-height: 1;
-  min-width: 44px;
   min-height: 44px;
   cursor: pointer;
   transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
