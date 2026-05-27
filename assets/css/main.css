@@ -421,9 +421,9 @@ button { cursor: pointer; font: inherit; }
   display: flex;
   align-items: center;
   gap: var(--sp-4);
-  /* bottom padding = home-indicator inset only (viewport-fit:cover extends
-     viewport to screen edge; env() covers the gesture area exactly) */
-  padding: var(--sp-3) var(--gutter) env(safe-area-inset-bottom, var(--sp-3));
+  /* Without viewport-fit:cover the default viewport is already bounded by
+     browser chrome — no safe-area inset required */
+  padding: var(--sp-3) var(--gutter);
   background: var(--paper);
   border-top: var(--rule-1) solid var(--ink-10);
 }
@@ -567,10 +567,10 @@ input[type="range"]:focus-visible {
 }
 
 /* Place pages: prevent footer from hiding behind the fixed bar on mobile.
-   68px ≈ player bar content height; env() adds the home-indicator inset. */
+   68px = player bar height (sp-3 top + 44px controls + sp-3 bottom). */
 @media (max-width: 600px) {
   .place-body ~ .site-footer {
-    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 68px;
   }
 }
 
@@ -769,8 +769,15 @@ input[type="range"]:focus-visible {
   height: 300px;
   border: var(--rule-4) solid var(--ink);
   position: relative;
+  /* z-index: 0 creates an explicit stacking context at the lowest level,
+     preventing the filter (below) from promoting this to a layer above
+     position:fixed elements on iOS Safari */
+  z-index: 0;
   overflow: hidden;
   background: var(--ink-10);
+  /* filter applied here (not on the iframe) so iOS Safari doesn't
+     composite the iframe into a GPU layer above the fixed player bar */
+  filter: grayscale(1) contrast(1.05) brightness(0.97);
 }
 
 @media (min-width: 601px)  { .map-frame { height: 360px; } }
@@ -781,7 +788,6 @@ input[type="range"]:focus-visible {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) contrast(1.05) brightness(0.97);
   pointer-events: none;
 }
 
