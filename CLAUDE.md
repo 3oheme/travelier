@@ -13,7 +13,7 @@ A static, photo-driven website that plays ambient sounds from real-world busy pl
 - **Static site generator: Jekyll.** Ruby-based. Idiomatic Jekyll patterns (collections, layouts, includes) are preferred over custom logic.
 - No backend, no database, no auth.
 - **Simple Analytics** for privacy-first page-view tracking (no backend required — it's a CDN script).
-- Hosted on **Cloudflare Pages**.
+- Hosted on **Cloudflare Pages** (HTML/CSS/JS/images). Audio tracks are hosted on **Cloudflare R2** at `audio.travelier.app` — they are not deployed with the site.
 - No JS framework. Plain JavaScript only, kept minimal — used only for the audio player on the detail page.
 
 ## UX model — multi-page
@@ -33,10 +33,22 @@ A static, photo-driven website that plays ambient sounds from real-world busy pl
 
 2. **Never put `filter` on a `<iframe>` element.** Safari composites filtered iframes into a GPU layer that renders above `position: fixed` elements regardless of z-index. The map filter (`grayscale / contrast / brightness`) lives on `.map-frame` (the container div), not on the `<iframe>` inside it.
 
-## Audio constraints (hard)
+## Audio — storage and constraints
 
-- Format: MP3, 96 kbps target.
-- Max file size: **24 MB** per track (safety margin under Cloudflare Pages' 25 MB per-file limit).
+Tracks are stored in **Cloudflare R2**, bucket `travelier-audio`, served via `https://audio.travelier.app`. They are **not** committed to the git repo and are excluded from the Cloudflare Pages build (`assets/places/*/track.mp3` is in `_config.yml` `exclude:`).
+
+The `<audio src>` is built at Jekyll build time from `site.r2_audio_base` (set in `_config.yml`) appended to `page.audio` (the path from each Place's front matter, e.g. `/assets/places/coco-cafe-jerez/track.mp3`). Leaving `r2_audio_base` empty falls back to the local file path — useful for local dev if you have the files on disk.
+
+### Adding or replacing a track
+
+1. Re-encode the file to `assets/places/<id>/track.mp3` locally.
+2. Upload it to R2: `bash scripts/upload-audio-r2.sh` (run from repo root, requires `wrangler` authenticated).
+3. The site picks it up on next deploy — no code change needed.
+
+### Hard constraints
+
+- Format: MP3. Target **192 kbps** now that R2 removes the file-size ceiling. (Alternatively, Opus in an `.ogg` container at 96–128 kbps gives equivalent or better quality at half the size.)
+- No per-file size limit from R2. Cloudflare R2 free tier covers 10 GB storage and zero egress fees.
 - Tracks loop automatically when they end. **Never** auto-advance to a different Place.
 - `<audio>` elements use `preload="none"`. No audio loads until the user explicitly presses play on the detail page.
 
@@ -87,7 +99,7 @@ Do not use *scene*, *soundscape*, *ambience*, *room*, *location*, or *spot* inte
 6. **Semantic HTML and `alt` text are mandatory.** Use `<button>` for buttons, `<nav>`, `<main>`, `<article>` for landmarks. Every image has an `alt` attribute. This is not an a11y deliverable — it's basic HTML hygiene. It also helps SEO.
 7. **Ask before adding any dependency.** Default to web-platform APIs and Jekyll built-ins.
 8. **Read the relevant file in `specs/` before writing feature code.** If a spec is missing or ambiguous, ask — don't invent.
-9. **Adding a Place must not require code changes.** New Places ship via a new `_places/<id>.md` file + assets in `assets/places/<id>/`. If a Place needs code, the data model is wrong — update `specs/02-data-model.md` first.
+9. **Adding a Place must not require code changes.** New Places ship via a new `_places/<id>.md` file, image assets in `assets/places/<id>/`, and the track uploaded to R2 via `bash scripts/upload-audio-r2.sh`. If a Place needs code, the data model is wrong — update `specs/02-data-model.md` first.
 10. **Commit messages reference the spec** they implement (e.g. `feat(player): play/pause control per specs/features/player.md`).
 
 ## Specs
