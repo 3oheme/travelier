@@ -15,7 +15,8 @@ layout: base
   <p class="place-desc">{{ page.description }}</p>
 
   <div class="player">
-    <audio id="place-audio" src="{{ page.audio }}" preload="none" loop></audio>
+    {% if site.r2_audio_base %}{% assign audio_src = site.r2_audio_base | append: page.audio %}{% else %}{% assign audio_src = page.audio %}{% endif %}
+    <audio id="place-audio" src="{{ audio_src }}" preload="none" loop></audio>
     <button id="play-btn" class="player-play" aria-label="Play">
       <span class="player-play__label">PLAY</span>
       <svg class="player-play__icon" width="16" height="18" viewBox="0 0 16 18" aria-hidden="true" focusable="false">

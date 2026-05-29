@@ -20,6 +20,13 @@ plugins:
 
 worker_url: "https://travelier.app"
 
+# Base URL for audio files served from Cloudflare R2.
+# Set to your R2 bucket public URL (no trailing slash), e.g.:
+#   https://pub-<hash>.r2.dev
+#   https://audio.travelier.app   ← custom domain on the bucket
+# Leave empty to fall back to local /assets paths (local dev only).
+r2_audio_base: "https://audio.travelier.app"
+
 exclude:
   - specs/
   - scripts/
@@ -28,3 +35,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - assets/places/*/track.mp3
