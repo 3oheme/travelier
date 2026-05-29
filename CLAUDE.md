@@ -11,7 +11,8 @@ A static, photo-driven website that plays ambient sounds from real-world busy pl
 ## Stack
 
 - **Static site generator: Jekyll.** Ruby-based. Idiomatic Jekyll patterns (collections, layouts, includes) are preferred over custom logic.
-- No backend, no database, no auth, no analytics.
+- No backend, no database, no auth.
+- **Simple Analytics** for privacy-first page-view tracking (no backend required — it's a CDN script).
 - Hosted on **Cloudflare Pages**.
 - No JS framework. Plain JavaScript only, kept minimal — used only for the audio player on the detail page.
 
@@ -20,6 +21,17 @@ A static, photo-driven website that plays ambient sounds from real-world busy pl
 - `/` — **catalog page.** Grid of Place cards, each a photograph + name. Tapping a card navigates to the detail page.
 - `/places/<id>/` — **detail page.** Hero image, name, description, creator credit, and the audio player. Audio plays only here.
 - **No persistent player.** Leaving the detail page (back navigation, opening another Place) stops playback. This is deliberate, not a limitation.
+
+### Player layout
+
+- **Mobile (≤ 600 px):** the player is `position: fixed; bottom: 0` — a bar pinned to the bottom of the viewport, always visible. Contains: play/pause button (fixed 150 px wide), volume slider, play count (stacked below slider). Border: `rule-4 solid ink`.
+- **Desktop (≥ 601 px):** the player is in the normal document flow, framed by `ink-10` top and bottom rules.
+
+### iOS Safari gotchas — read before touching the player
+
+1. **Do not add `viewport-fit=cover` to the meta viewport.** It extends the page behind the browser's navigation toolbar (~84 px). `env(safe-area-inset-bottom)` only covers the home indicator (~34 px), leaving ~50 px of the fixed player hidden. The default bounded viewport already positions `bottom: 0` correctly above the toolbar.
+
+2. **Never put `filter` on a `<iframe>` element.** Safari composites filtered iframes into a GPU layer that renders above `position: fixed` elements regardless of z-index. The map filter (`grayscale / contrast / brightness`) lives on `.map-frame` (the container div), not on the `<iframe>` inside it.
 
 ## Audio constraints (hard)
 
@@ -63,7 +75,7 @@ Do not use *scene*, *soundscape*, *ambience*, *room*, *location*, or *spot* inte
 2. **No accounts, ever.** If a feature seems to need login, the feature is wrong for this product.
 3. **No runtime third-party dependencies**, with two explicit exceptions:
    - **Google Fonts CDN** is used for the typefaces defined in the design system (Zilla Slab, Merriweather, Playfair Display SC). These are loaded with `font-display=swap` so they do not block rendering and the site degrades gracefully to system serif fallbacks.
-   - **Simple Analytics** (`scripts.simpleanalyticscdn.com/latest.js`) is loaded `async` just before `</body>` in `_layouts/base.html`. It records aggregate page-view counts — no cookies, no fingerprinting, no personal data, GDPR-compliant.
+   - **Simple Analytics** (`scripts.simpleanalyticscdn.com/latest.js`) is loaded `async` just before `</body>` in `_layouts/base.html`. It records aggregate page-view counts — no cookies, no fingerprinting, no personal data, GDPR-compliant. A custom event `sa_event('play_<placeId>')` is fired on the first play click per page load (in `assets/js/player.js`). The `sa_event` queue stub must remain in `<head>` so events fired before the async script loads are buffered.
    No other external APIs, tracking scripts, or CDNs are permitted.
 4. **No JS framework.** Plain JavaScript only. Used only for the audio player. If a feature seems to need React/Vue/Alpine, the feature is wrong.
 5. **Performance budget:**
