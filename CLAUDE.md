@@ -101,6 +101,7 @@ Do not use *scene*, *soundscape*, *ambience*, *room*, *location*, or *spot* inte
 8. **Read the relevant file in `specs/` before writing feature code.** If a spec is missing or ambiguous, ask — don't invent.
 9. **Adding a Place must not require code changes.** New Places ship via a new `_places/<id>.md` file, image assets in `assets/places/<id>/`, and the track uploaded to R2 via `bash scripts/upload-audio-r2.sh`. If a Place needs code, the data model is wrong — update `specs/02-data-model.md` first.
 10. **Commit messages reference the spec** they implement (e.g. `feat(player): play/pause control per specs/features/player.md`).
+11. **Update `changelog.md` before pushing any user-visible change.** Add a short entry under the current month's heading (or create a new `## Month Year` heading at the top if the month has changed). User-visible means: new Places, new features, UI changes, content updates. Internal refactors, docs, and config-only changes do not need a changelog entry.
 
 ## Specs
 
