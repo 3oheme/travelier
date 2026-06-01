@@ -18,4 +18,20 @@ What's new on Travelier.
 
 **Audio served from Cloudflare R2.** Tracks now stream from a dedicated audio subdomain — faster loads, no file-size ceiling on recordings.
 
+## May 2026
+
+**Launched.** Travelier goes live with 13 places across Japan, Europe, the USA, and Taiwan.
+
+**Browse by tag.** Every place is tagged — indoor, outdoor, rain, café, beach, and more. Tag pages let you filter the catalog by mood.
+
+**Play counter.** Each place tracks how many times it has been played. Counts appear on catalog cards and on the player.
+
+**The Science page.** A short read on why ambient noise helps you focus, with links to the research behind it.
+
+**"Pair with" playlists.** Each detail page now suggests music playlists that work well with that place's sound.
+
+**License and tags on detail pages.** Every place now shows its audio licence and a set of browsable tags.
+
+**Player redesign.** On mobile, the player is now a fixed bar pinned to the bottom of the screen — always visible while you read or navigate.
+
 — More places, always.
