@@ -27,6 +27,11 @@ worker_url: "https://travelier.app"
 # Leave empty to fall back to local /assets paths (local dev only).
 r2_audio_base: "https://audio.travelier.app"
 
+featured_collection:
+  tag: beach
+  title: "Shorelines"
+  tagline: "Six beaches. Waves that don't stop."
+
 exclude:
   - specs/
   - scripts/

@@ -1,6 +1,31 @@
 ---
 layout: default
 ---
+
+{% if site.featured_collection %}
+  {% assign fc = site.featured_collection %}
+  {% assign fc_places = site.places | where_exp: "p", "p.tags contains fc.tag" | sort: "sortWeight" | reverse %}
+  {% assign fc_preview = fc_places | slice: 0, 3 %}
+  {% assign fc_count = fc_places | size %}
+  {% if fc_preview.size > 0 %}
+<section class="collection-banner">
+  <div class="collection-banner__photos" aria-hidden="true">
+    {% for p in fc_preview %}
+    <div class="collection-banner__thumb">
+      <img src="{{ p.images.thumb }}" alt="" width="600" height="450" loading="lazy">
+    </div>
+    {% endfor %}
+  </div>
+  <div class="collection-banner__text">
+    <span class="collection-banner__label">Collection</span>
+    <p class="collection-banner__title">{{ fc.title }}</p>
+    <p class="collection-banner__tagline">{{ fc.tagline }}</p>
+    <a href="/tags/{{ fc.tag }}/" class="btn collection-banner__btn">{{ fc_count }} places &rarr;</a>
+  </div>
+</section>
+  {% endif %}
+{% endif %}
+
 <div class="catalog">
   {% assign by_name = site.places | sort: "name" %}
   {% assign places = by_name | sort: "sortWeight" | reverse %}
