@@ -97,6 +97,49 @@ layout: base
   </p>
 </main>
 
+{% assign sorted_candidates = site.places | sort: "sortWeight" | reverse %}
+{% assign related_places = "" | split: "" %}
+{% for p in sorted_candidates %}
+  {% unless p.url == page.url %}
+    {% for tag in page.tags %}
+      {% if p.tags contains tag %}
+        {% assign related_places = related_places | push: p %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+{% assign related_places = related_places | slice: 0, 3 %}
+
+{% if related_places.size > 0 %}
+<section class="place-related">
+  <div class="place-related__inner">
+    <div class="sec-head">
+      <span class="sec-head__t">More places</span>
+      <div class="sec-head__rule"></div>
+    </div>
+    <div class="rel-grid">
+      {% for p in related_places %}
+      <a href="{{ p.url }}" class="rel-card">
+        <div class="rel-card__photo">
+          <img
+            src="{{ p.images.thumb }}"
+            alt="{{ p.images.alt }}"
+            width="600"
+            height="450"
+            loading="lazy">
+        </div>
+        <div class="rel-card__body">
+          <span class="rel-card__name">{{ p.name }}</span>
+          <span class="rel-card__creator">{{ p.creator.name }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <footer class="site-footer">
   <p class="site-footer__tagline">— quiet, please.</p>
   <nav class="site-footer__nav" aria-label="Footer navigation">

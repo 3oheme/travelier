@@ -793,6 +793,99 @@ input[type="range"]:focus-visible {
 }
 
 
+/* ── related places ──────────────────────────────────────── */
+.place-related {
+  border-top: var(--rule-2) solid var(--ink-10);
+  padding: var(--sp-12) var(--gutter);
+}
+
+.place-related__inner {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+.rel-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+@media (min-width: 601px) {
+  .rel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
+}
+
+@media (min-width: 1025px) {
+  .rel-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.rel-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3);
+  text-decoration: none;
+  color: inherit;
+  border: var(--rule-2) solid var(--ink);
+  transition: transform 0.12s ease;
+}
+
+.rel-card:hover {
+  transform: translate(-2px, -2px);
+}
+
+.rel-card__photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  background: var(--ink-10);
+}
+
+.rel-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.rel-card:hover .rel-card__photo img {
+  transform: scale(1.05);
+}
+
+.rel-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  min-width: 0;
+}
+
+.rel-card__name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--ink);
+  display: block;
+}
+
+.rel-card__creator {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-60);
+  display: block;
+}
+
 /* ── prose (about + static pages) ───────────────────────── */
 .prose {
   padding: var(--sp-8) var(--gutter) var(--sp-12);
