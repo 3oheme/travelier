@@ -10,6 +10,8 @@ What's new on Travelier.
 
 ## June 2026
 
+**Five new places.** Rooftop in Bushwick Brooklyn, downtown Mexico City, a polder near 's-Hertogenbosch (Netherlands), a rainy night in Rio Acima (Brazil), and dawn in the Amazon rainforest at Tauary.
+
 **Five new places.** Ban Na Tin rain (Thailand), Kanaalpark 's-Hertogenbosch (Netherlands), Mirleft weekly souk (Morocco), a pub in Primrose Hill (London), and a piazza in Venice.
 
 **Related places.** Every detail page now shows up to three related places at the bottom, matched by tag.
