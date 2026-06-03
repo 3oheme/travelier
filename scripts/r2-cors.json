@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": [
+          "https://travelier.app",
+          "http://localhost:4000"
+        ],
+        "methods": ["GET", "HEAD"],
+        "headers": ["*"]
+      },
+      "exposeHeaders": ["Content-Length", "Content-Range", "Accept-Ranges"],
+      "maxAgeSeconds": 86400
+    }
+  ]
+}

@@ -16,12 +16,13 @@ layout: base
 
   <div class="player">
     {% if site.r2_audio_base %}{% assign audio_src = site.r2_audio_base | append: page.audio %}{% else %}{% assign audio_src = page.audio %}{% endif %}
-    <audio id="place-audio" src="{{ audio_src }}" preload="none" loop></audio>
+    <audio id="place-audio" src="{{ audio_src }}" preload="none" loop crossorigin="anonymous"></audio>
     <button id="play-btn" class="player-play" aria-label="Play">
       <span class="player-play__label">PLAY</span>
       <svg class="player-play__icon" width="16" height="18" viewBox="0 0 16 18" aria-hidden="true" focusable="false">
         <polygon points="0,0 16,9 0,18" fill="currentColor"/>
       </svg>
+      <canvas class="player-play__viz" width="110" height="22" aria-hidden="true"></canvas>
     </button>
     <div class="player-right">
       <div class="player-volume">

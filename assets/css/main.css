@@ -481,6 +481,7 @@ button { cursor: pointer; font: inherit; }
   border-color: var(--ink-60);
 }
 .player-play__icon { display: block; }
+.player-play__viz  { display: none; }
 
 /* volume */
 .player-volume {
