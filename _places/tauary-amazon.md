@@ -6,7 +6,7 @@ description: |
 
   The birds begin before the light comes. Toucans call. Then other birds, layered and overlapping, the rainforest waking up in its particular order. The river is under everything — a constant low presence. The air is wet and close.
 
-  Ten minutes of it, but complete. Recorded with Brüel & Kjær 4006 microphones in an AB pair configuration on a Sound Devices 633. Over twelve thousand downloads on Freesound. Some recordings don't need to be long.
+  Ten minutes of it, but complete. Recorded with Brüel & Kjær 4006 microphones in an AB pair configuration on a Sound Devices 633.
 images:
   hero: /assets/places/tauary-amazon/hero.webp
   thumb: /assets/places/tauary-amazon/thumb.webp

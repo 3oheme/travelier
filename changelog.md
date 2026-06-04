@@ -10,6 +10,8 @@ What's new on Travelier.
 
 ## June 2026
 
+**Updated photos and description for Tauary Amazon, Bushwick Brooklyn, and Kanaalpark 's-Hertogenbosch.**
+
 **Frequency visualizer on the play button.** While a place is playing, the play button displays a live spectrogram — vertical bars driven by real audio frequency data via the Web Audio API.
 
 **Five new places.** Rooftop in Bushwick Brooklyn, downtown Mexico City, a polder near 's-Hertogenbosch (Netherlands), a rainy night in Rio Acima (Brazil), and dawn in the Amazon rainforest at Tauary.
