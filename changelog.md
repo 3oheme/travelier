@@ -10,6 +10,8 @@ What's new on Travelier.
 
 ## June 2026
 
+**Homepage hero.** New full-width hero on the catalog page with the "Travel, Listen, Focus" headline and a link to The Science.
+
 **Updated photos and description for Tauary Amazon, Bushwick Brooklyn, and Kanaalpark 's-Hertogenbosch.**
 
 **Frequency visualizer on the play button.** While a place is playing, the play button displays a live spectrogram — vertical bars driven by real audio frequency data via the Web Audio API.

@@ -2,34 +2,27 @@
 layout: default
 ---
 
+<section class="home-hero">
+  <div class="home-hero__inner">
+    <h1 class="home-hero__title">Travel, Listen, Focus</h1>
+    <p class="home-hero__sub">The free app that will help you focus and get stuff done. Promised. <a href="/science/" class="home-hero__cta">How it works</a></p>
+  </div>
+</section>
+
 {% if site.featured_collection %}
   {% assign fc = site.featured_collection %}
   {% assign fc_places = site.places | where_exp: "p", "p.tags contains fc.tag" | sort: "sortWeight" | reverse %}
   {% assign fc_preview = fc_places | slice: 0, 3 %}
   {% assign fc_count = fc_places | size %}
-  {% if fc_preview.size > 0 %}
-<section class="collection-banner">
-  <div class="collection-banner__photos" aria-hidden="true">
-    {% for p in fc_preview %}
-    <div class="collection-banner__thumb">
-      <img src="{{ p.images.thumb }}" alt="" width="600" height="450" loading="lazy">
-    </div>
-    {% endfor %}
-  </div>
-  <div class="collection-banner__text">
-    <span class="collection-banner__label">Collection</span>
-    <p class="collection-banner__title">{{ fc.title }}</p>
-    <p class="collection-banner__tagline">{{ fc.tagline }}</p>
-    <a href="/tags/{{ fc.tag }}/" class="btn collection-banner__btn">{{ fc_count }} places &rarr;</a>
-  </div>
-</section>
-  {% endif %}
 {% endif %}
 
 <div class="catalog">
   {% assign by_name = site.places | sort: "name" %}
   {% assign places = by_name | sort: "sortWeight" | reverse %}
   {% for place in places %}
+  {% if forloop.index == 7 %}
+  {% include collection-banner.html %}
+  {% endif %}
   <article class="card" data-id="{{ place.url | remove: '/places/' | remove: '/' }}">
     <a href="{{ place.url }}" class="card__link" aria-label="{{ place.name }}">
       <div class="card__photo">
@@ -51,6 +44,9 @@ layout: default
     </a>
   </article>
   {% endfor %}
+  {% if places.size <= 6 %}
+  {% include collection-banner.html %}
+  {% endif %}
 </div>
 
 {% assign all_tags = site.places | map: "tags" | flatten | uniq | sort %}

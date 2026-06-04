@@ -212,6 +212,48 @@ button { cursor: pointer; font: inherit; }
   .site-header__wordmark { font-size: 31px; }
 }
 
+/* ── home hero ───────────────────────────────────────────── */
+.home-hero {
+  min-height: 55vh;
+  background-color: var(--paper);
+  background-image: url('/assets/img/home-hero.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--sp-24) var(--gutter) var(--sp-12);
+  border-bottom: var(--rule-4) solid var(--ink);
+}
+
+.home-hero__inner {
+  text-align: center;
+  max-width: 320px;
+}
+
+.home-hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin: 0 0 var(--sp-4);
+}
+
+.home-hero__sub {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.home-hero__cta {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ── catalog grid ────────────────────────────────────────── */
 .catalog {
   display: grid;
@@ -795,13 +837,17 @@ input[type="range"]:focus-visible {
 
 
 /* ── collection banner (homepage) ───────────────────────── */
+.catalog .collection-banner {
+  grid-column: 1 / -1;
+}
+
 .collection-banner {
   display: flex;
   flex-direction: column;
   gap: var(--sp-6);
   padding: var(--sp-8) var(--gutter);
   background: var(--paper-cool);
-  border-bottom: var(--rule-4) solid var(--ink);
+  border: var(--rule-4) solid var(--ink);
 }
 
 .collection-banner__photos {
