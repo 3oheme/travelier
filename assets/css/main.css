@@ -214,7 +214,7 @@ button { cursor: pointer; font: inherit; }
 
 /* ── home hero ───────────────────────────────────────────── */
 .home-hero {
-  min-height: 55vh;
+  min-height: 40vh;
   background-color: var(--paper);
   background-image: url('/assets/img/home-hero.webp');
   background-repeat: no-repeat;
@@ -225,6 +225,10 @@ button { cursor: pointer; font: inherit; }
   align-items: flex-start;
   padding: var(--sp-24) var(--gutter) var(--sp-12);
   border-bottom: var(--rule-4) solid var(--ink);
+}
+
+@media (min-width: 1025px) {
+  .home-hero { min-height: 50vh; }
 }
 
 .home-hero__inner {
