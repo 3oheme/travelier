@@ -23,4 +23,20 @@ featured: false
 sortWeight: 500
 tags: [outdoor, nature, birds, rainforest, amazon, brazil, latin-america, dawn]
 license: "[CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by felix.blume"
+playlists:
+  - title: "Amazon Rainforest Waking Up — George Vlad"
+    url: https://soundcloud.com/georgevlad/amazon-rainforest-waking-up
+    source: SoundCloud
+  - title: "Waterfall Jungle Sounds — Singing Birds Ambience"
+    url: https://soundcloud.com/user-508537478/waterfall-jungle-sounds
+    source: SoundCloud
+  - title: "Rainforest On The Edge — Wild Ambience"
+    url: https://soundcloud.com/wildambience/rainforest-on-the-edge
+    source: SoundCloud
+  - title: "Calming Forest, Bird & Nature Sounds"
+    url: https://open.spotify.com/playlist/1vm8GNDZzYEkVQcoArNySo
+    source: Spotify
+  - title: "Top Bossanova & Brazilian Jazz"
+    url: https://open.spotify.com/playlist/3IZ3ZtDAgCLkTDaj5rbiIz
+    source: Spotify
 ---

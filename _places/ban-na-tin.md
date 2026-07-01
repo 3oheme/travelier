@@ -23,4 +23,20 @@ featured: false
 sortWeight: 570
 tags: [outdoor, rain, thunder, thailand, asia, nature]
 license: "[CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by felix.blume"
+playlists:
+  - title: "Thailand Chill! 2026"
+    url: https://open.spotify.com/playlist/5uYklP9yeYsWJPz81Nw8t7
+    source: Spotify
+  - title: "Molam & Luk Thung"
+    url: https://open.spotify.com/playlist/1EPCxAZcXXVQIdFHuCKM9V
+    source: Spotify
+  - title: "Thai Molam Music"
+    url: https://open.spotify.com/playlist/0Sfwnw5nsWBqerDRCUIs8i
+    source: Spotify
+  - title: "Relaxing Rain Sounds — Rainfall & Gentle Thunder"
+    url: https://open.spotify.com/playlist/3BUgMBauatNRWnE0TxO6qG
+    source: Spotify
+  - title: "Rainforest Ambience — Rain, Jungle & Distant Thunder"
+    url: https://soundcloud.com/relaxing_guru/rainforest-ambience-with-sounds-of-rain-jungle-animals-and-thunder-in-the-distance
+    source: SoundCloud
 ---

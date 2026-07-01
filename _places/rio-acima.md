@@ -23,4 +23,20 @@ featured: false
 sortWeight: 490
 tags: [outdoor, rain, thunder, brazil, latin-america, night, nature]
 license: "[CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by felix.blume"
+playlists:
+  - title: "Bossa Nova, MPB & Rio"
+    url: https://open.spotify.com/playlist/4tfSVIa2Jg2uR6mPDjOG5u
+    source: Spotify
+  - title: "Relax Brazil — MPB · Bossa Nova · Lounge"
+    url: https://open.spotify.com/playlist/2uvGkFv3TUs4cKi3MKMDdx
+    source: Spotify
+  - title: "Brazilian Music Classics"
+    url: https://open.spotify.com/playlist/62t096GzebTzkBEvUPVI0y
+    source: Spotify
+  - title: "Bossa Nova Lounge Set Mix"
+    url: https://www.mixcloud.com/djmarkguedes/bossa-nova-lounge-set-mix/
+    source: Mixcloud
+  - title: "Heavy Thunderstorm Sounds — Rain, Thunder & Lightning"
+    url: https://soundcloud.com/relaxing_guru/heavy-thunderstorm-sounds-6-hours-rain-with-thunder-and-lightning-noises-for-sleep-study-relax
+    source: SoundCloud
 ---

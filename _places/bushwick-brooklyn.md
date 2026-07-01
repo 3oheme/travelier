@@ -23,4 +23,20 @@ featured: false
 sortWeight: 520
 tags: [outdoor, urban, rooftop, new-york, usa, night, train]
 license: "[CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by SpliceSound"
+playlists:
+  - title: "The Sound of Brooklyn Indie"
+    url: https://open.spotify.com/playlist/78MPGFVq0C4yrfvgxZKngM
+    source: Spotify
+  - title: "sitting on a brooklyn rooftop at sunset"
+    url: https://open.spotify.com/playlist/0SLlf4AhVq4BomQGr6P5Xk
+    source: Spotify
+  - title: "Night Skies — Indie Rock & Lo-Fi Pop"
+    url: https://open.spotify.com/playlist/2CUws7C9W05PGaHS2hWaqa
+    source: Spotify
+  - title: "Lofi Indie"
+    url: https://open.spotify.com/playlist/37i9dQZF1DX0CIO5EOSHeD
+    source: Spotify
+  - title: "Late Night Gaming — Lo-Fi Hip Hop Mix"
+    url: https://www.mixcloud.com/RadioChillFi/otter-records-late-night-gaming-a-lofi-hip-hop-mix-to-game-to/
+    source: Mixcloud
 ---

@@ -23,4 +23,20 @@ featured: false
 sortWeight: 550
 tags: [outdoor, park, birds, netherlands, autumn, europe, nature]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld"
+playlists:
+  - title: "Autumn Ambience — Relaxing Fall Instrumental Music"
+    url: https://open.spotify.com/playlist/1q28ne98lPZmcJzHJFtMvF
+    source: Spotify
+  - title: "Fall Instrumental — Chill Music for Rainy Autumn Days"
+    url: https://open.spotify.com/playlist/6s8jzPpagDt10201TE9ayZ
+    source: Spotify
+  - title: "Instrumental Indie Folk"
+    url: https://open.spotify.com/playlist/1Zgo4kCR0T1lks9AS8mvKg
+    source: Spotify
+  - title: "Calming Forest, Bird & Nature Sounds"
+    url: https://open.spotify.com/playlist/1vm8GNDZzYEkVQcoArNySo
+    source: Spotify
+  - title: "Nordic Playlist — Cozy Music for a Calm, Hygge Home"
+    url: https://open.spotify.com/playlist/6twAmVD7zzXvRin1RkiWxx
+    source: Spotify
 ---

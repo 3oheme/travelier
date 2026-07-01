@@ -23,4 +23,20 @@ featured: false
 sortWeight: 560
 tags: [outdoor, italy, urban, square, music, europe]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by YOH"
+playlists:
+  - title: "Best of Italian Café — A Putumayo Playlist"
+    url: https://open.spotify.com/playlist/4sIMtfPQMRtWedyb8F83dt
+    source: Spotify
+  - title: "Italian Jazz Café"
+    url: https://open.spotify.com/playlist/6s1aCLqTC3NBDqiKo9vn8a
+    source: Spotify
+  - title: "Top Accordion Songs — Italian Folk World Music"
+    url: https://open.spotify.com/playlist/4xF81opwrygRU68ht3gu6j
+    source: Spotify
+  - title: "Music From Venice — The Best Italian Songs From Venezia"
+    url: https://music.apple.com/gb/album/music-from-venice-the-best-italian-songs-from-venezia/551266410
+    source: Apple Music
+  - title: "Cooking to Italian Classics"
+    url: https://music.apple.com/us/playlist/cooking-to-italian-classics/pl.4cab6b7ba08044b0857e71861957ce79
+    source: Apple Music
 ---

@@ -23,4 +23,20 @@ featured: false
 sortWeight: 530
 tags: [outdoor, urban, street, mexico, latin-america, city]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded and composed by felix.blume"
+playlists:
+  - title: "Mexican Songs — Traditional & Popular Mariachi"
+    url: https://open.spotify.com/playlist/0GlHS79uCM5Jinmo6IFhHN
+    source: Spotify
+  - title: "Mariachi Cumbia Mix"
+    url: https://open.spotify.com/playlist/1lUA0AZJ3UOrm92bXBy9JZ
+    source: Spotify
+  - title: "Cumbia Top 10 Mexico"
+    url: https://open.spotify.com/playlist/6SThqSZnZCA96o5hRVAoj9
+    source: Spotify
+  - title: "Cumbia Sonidera — Opción Sónica Mix"
+    url: https://www.mixcloud.com/ramirogomezmarcelino/cumbia-sonidera-mexico-opcion-sonica-mix/
+    source: Mixcloud
+  - title: "Turbo Sonidero — Cumbia Mexicana de Antaño"
+    url: https://www.mixcloud.com/vandalizmpodcast/023-turbo-sonidero-cumbia-mexicana-sonidera-de-anta%D1%81o/
+    source: Mixcloud
 ---

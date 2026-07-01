@@ -23,4 +23,20 @@ featured: false
 sortWeight: 510
 tags: [outdoor, nature, birds, netherlands, polder, train, europe]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by klankbeeld"
+playlists:
+  - title: "The Sound of Nordic Ambient"
+    url: https://open.spotify.com/playlist/6fjFw9EBblcy8D3tWL16pC
+    source: Spotify
+  - title: "Relaxing Nordic Music for Reading & Writing"
+    url: https://open.spotify.com/playlist/2SOnx682UC102BeKYsDE5x
+    source: Spotify
+  - title: "Ambient & Neoclassical"
+    url: https://open.spotify.com/playlist/0LZA4FA3kTZz7bjpKQDGTT
+    source: Spotify
+  - title: "Atmospheric Folk Instrumental — Ambient Folk"
+    url: https://open.spotify.com/playlist/4AAz609nBkLrHqf5JjBWAA
+    source: Spotify
+  - title: "Relaxing Instrumental Music with Nature & Ambient Sounds"
+    url: https://open.spotify.com/playlist/6BRtH2ly0fwtQRnbdULQ92
+    source: Spotify
 ---

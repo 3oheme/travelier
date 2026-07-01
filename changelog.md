@@ -8,6 +8,10 @@ permalink: /changelog/
 
 What's new on Travelier.
 
+## July 2026
+
+**"Pair with" music on every place.** Every detail page now suggests four to six hand-picked playlists and mixes that match the place's mood and location — spanning Spotify, Mixcloud, SoundCloud, and Apple Music.
+
 ## June 2026
 
 **Homepage hero.** New full-width hero on the catalog page with the "Travel, Listen, Focus" headline and a link to The Science.

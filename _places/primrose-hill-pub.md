@@ -23,4 +23,20 @@ featured: false
 sortWeight: 540
 tags: [indoor, pub, london, uk, urban, europe]
 license: "[CC0 (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/) — recorded by mdayalan"
+playlists:
+  - title: "Ultimate British Pub Songs"
+    url: https://open.spotify.com/playlist/5YqFDZl0AYLSa3XY6JcUlq
+    source: Spotify
+  - title: "Pub Jukebox — Big Singalong"
+    url: https://open.spotify.com/playlist/02QD3qA8QYpzENNXW0QRKk
+    source: Spotify
+  - title: "The Sound of London Indie"
+    url: https://open.spotify.com/playlist/68flNqi5a3bGzvTqpCkNZS
+    source: Spotify
+  - title: "British Indie Folk"
+    url: https://open.spotify.com/playlist/030CPk9kAkWRqpSq4qSLTg
+    source: Spotify
+  - title: "London Pub Vibes"
+    url: https://open.spotify.com/playlist/380v50LgsH2eVZgXJEmcfS
+    source: Spotify
 ---

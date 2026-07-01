@@ -23,4 +23,23 @@ featured: false
 sortWeight: 580
 tags: [outdoor, market, morocco, africa, street, berber]
 license: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — recorded by juskiddink"
+playlists:
+  - title: "The Sound of Moroccan Traditional"
+    url: https://open.spotify.com/playlist/65oDfp1E9qx1WvIvPAPUwK
+    source: Spotify
+  - title: "The Sound of Gnawa"
+    url: https://open.spotify.com/playlist/6mamWhhdPEd5y5IfHmCXUC
+    source: Spotify
+  - title: "Berber Music Morocco"
+    url: https://open.spotify.com/playlist/0sfibQQYcB7Vsnv2lkN9eD
+    source: Spotify
+  - title: "Moroccan Gnawa"
+    url: https://open.spotify.com/playlist/1Xm24hHwmSoGIrJHI9uLNh
+    source: Spotify
+  - title: "Gnawa Mix — Volume 1"
+    url: https://www.mixcloud.com/DracheMusicale/gnawa-mix-volume-1/
+    source: Mixcloud
+  - title: "Rabii Harnoune & V.B.Kühl — Gnawa Mix"
+    url: https://www.mixcloud.com/truthoughts/rabii-harnoune-vbk%C3%BChl-gnawa-mix/
+    source: Mixcloud
 ---
